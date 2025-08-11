@@ -18,3 +18,5 @@ Web development stacks
 Flask
 * https://flask.palletsprojects.com/en/stable/quickstart/ 
 * Up to and including "The Request Object"
+
+Blueprints

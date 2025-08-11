@@ -16,6 +16,9 @@ Install mongoDB and pymongo.
 * to install pymongo:
     - pip install pymongo
 
+* Setup a MongoDB Atlas account
+  * create a free cluster
+
 ### Review concepts
 
 Review key python concepts (see references below):   

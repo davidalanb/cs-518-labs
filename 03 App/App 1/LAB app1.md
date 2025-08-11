@@ -1,5 +1,7 @@
 ## Flask 1
 
+TODO: use Blueprints from the start
+
 Index:
 * Create base route ('/') with hello_world example
 * Create an index page ('templates/index.html') and user render_template to serve it at the base route.
