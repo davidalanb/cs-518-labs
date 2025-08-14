@@ -12,6 +12,19 @@ Submission:
     - user_manager.py
     - user_models.py
 
+## Setup
+
+Setup:
+
+* Create the initial directory structure for your project.  In this example, demo-project is the root of my repo:
+    - demo-project/app/users/data
+* Copy the files from the "code" directory into this directory.
+
+Notes:
+
+* The class will be building a project week-by-week and organization is essential.  
+* The professor and TAs will also be reviewing your repos and enforce good organization!
+
 ## User models
 
 Explore the user models:
