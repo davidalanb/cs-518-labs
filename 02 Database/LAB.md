@@ -1,42 +1,72 @@
-## Lab 3 - Data management
+# Lab 3 - Data management
 
 Goal:
+
 * Develop UserManager for User DB management
 
 Submission:
-* This is an individual assignment
-* Submit your work to your individual repo on Gitlab
 
-### Part 1
-
-Part 1: 
-* Implement these methods of UserManager:
-    * __init__
-    * reset
-    * create_user
-    * read_user
-    * read_users
-    * update_user
-    * delete_user
-* Implement tests that execute each method at least once
-
-Submission part 1:
-* user_manager/
-    - UserManager.py 
+* Sign up for the course on Gradescope using this code: 7X7RNJ
+* Submit these files to assignment "Database 1":
+    - db_manager.py
+    - user_manager.py
     - user_models.py
-    - user_tests.py
 
-### Connect to MongoDB Atlas
+## User models
 
-Login to mongoDB Atlas in your browser:
-* Database > Clusters > Create / Connect > Drivers
-    - Copy URI (starts with mongodb+srv)
-* Security > DB Access > Users
-    - Get username and password
-    - update <password> in your URI
+Explore the user models:
 
-### Configure Atlas for access from Functions App
+* See "user_models.py" in the code folder
+    - these models are implemented for you
+* write a user_validation.py script to try:
+    - create a User with all required fields
+    - missing fields
+    - with extra fields
+* what happens?
 
-* Sign into MongoDB Atlas
-* Security > Network Access > Add IP Address
-* Add this Entry: 0.0.0.0/0
+## User DB management
+
+Init:
+
+* open "user_manager.py" and "db_manager.py"
+* review the __init__ functions in both of these.
+    - these are both implemented for you
+* what is going on here?
+
+Tests:
+
+* now open "test_users.py".
+* review the first 2 tests - basic and unique.
+* make sure you understand each line.
+
+Create and read:
+
+* in "db_manager.py" implement create and read_by_id
+* when you create, you should set the new User's id to a unique string like this:
+
+```python
+d['_id']=str(ObjectId())
+```
+
+Reads, update, and delete:
+
+* review the remaining tests in "test_users.py"
+* implement the remaining methods in db_manager.py, testing as you go
+* be sure to use "_id" when querying by id 
+
+## Notes
+
+* You may notice this line in "user_models.py":
+
+``` python
+id: str = Field(alias='_id',default=None)
+```
+
+* mongoDB uses _id for a unique id.  However, pydantic ignores fields that start with underscore.  
+    - using an alias is a workaround for this
+
+
+
+
+
+
