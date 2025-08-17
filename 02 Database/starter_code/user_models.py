@@ -9,6 +9,9 @@ class User(BaseModel):
     password:str
     admin: Optional[bool] = False
 
+class UserCollection(BaseModel):
+    users: list[User]
+
 class UserQuery(BaseModel):
     username: Optional[str] = None
 

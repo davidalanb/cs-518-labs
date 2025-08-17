@@ -65,7 +65,16 @@ Reads, update, and delete:
 
 * review the remaining tests in "test_users.py"
 * implement the remaining methods in db_manager.py, testing as you go
+
+Tips:
+
 * be sure to use "_id" when querying by id 
+* when you are returning many, you should cast the Cursor to a list, like this (pseudocode):
+
+```
+docs = find()
+return list(docs)
+```
 
 ## Notes
 

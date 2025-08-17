@@ -2,7 +2,8 @@ import unittest
 
 from pymongo.errors import DuplicateKeyError
 
-from db_manager import DBManager
+# from db_manager import DBManager
+
 from user_manager import UserManager
 from user_models import *
 
@@ -57,7 +58,9 @@ class TestUserManager(unittest.TestCase):
 
         q = UserQuery(username='jane')
         us = um.read(q.model_dump())
-        self.assertEqual(u.username,'jane')
+
+        u_out = User(**us[0])
+        self.assertEqual(u_out.username,'jane')
 
     # @unittest.skip
     def test_update(self):
