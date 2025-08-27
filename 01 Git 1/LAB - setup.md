@@ -59,7 +59,10 @@ Create a new project in Gitlab:
   - do not include '<' and '>' symbols
   - e.g., benedetto-project
 
-Add your grader with permissions >= "Reporter"
+Add your grader with permissions >= "Reporter".
+
+* In the left sidebar go to Manage -> Members
+* Add your grader according to the table below
 
 | Section | Students | Initials | Gitlab | Email |
 | :--- | :--- | :--- | :--- | :--- |
