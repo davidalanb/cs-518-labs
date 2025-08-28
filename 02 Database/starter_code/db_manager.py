@@ -33,4 +33,5 @@ class DBManager:
         ''' update by query and return deleted_count '''
     
     def delete_all(self):
-        ''' delete all and return deleted_count '''     
+        result = self.col.delete_many({})
+        return result.deleted_count              

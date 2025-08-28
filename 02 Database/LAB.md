@@ -31,11 +31,9 @@ Explore the user models:
 
 * See "user_models.py" in the code folder
     - these models are implemented for you
-* write a user_validation.py script to try:
-    - create a User with all required fields
-    - missing fields
-    - with extra fields
-* what happens?
+* See "validate_users.py"
+    * Describe the three users / cases here
+    * What result do you get in each case?  why?
 
 ## User DB management
 
@@ -51,6 +49,10 @@ Tests:
 * now open "test_users.py".
 * review the first 2 tests - basic and unique.
 * make sure you understand each line.
+
+Delete_all
+
+* Review "delete_all" in db_manager.py
 
 Create and read:
 
