@@ -7,7 +7,7 @@ from pymongo.errors import DuplicateKeyError
 from user_manager import UserManager
 from user_models import *
 
-conn_str = "mongodb+srv://student123:student123@cluster0.n5ntvo6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+conn_str = "YOUR URL HERE"
 um = UserManager(conn_str)
 
 class TestUserManager(unittest.TestCase):
