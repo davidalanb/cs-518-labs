@@ -2,8 +2,10 @@
 
 Submission:
 
-- You will submit code and notes for the concepts below.
-- You can submit code and notes separately, or just well-commented code.
+- Submit code with appropriate comments
+    - python_prep
+    - pydantic_prep
+    - pymongo_prep
 - There is nothing specific for you to implement - you should just get familiar with the concepts and DB operations below.
 - Submit to Canvas, like a reading response.  
     - you should have about 400 words of code and other text, combined
@@ -26,6 +28,8 @@ Login to mongoDB Atlas in your browser:
     - Get username and password
     - update <password> in your URI
 
+(Save the URI for later, you will use it on pymongo_prep below)
+
 ### Configuring Atlas for access from anywhere
 
 * Sign into MongoDB Atlas
@@ -45,22 +49,29 @@ pip install pymongo
 
 ## Review concepts
 
+**python_prep.py**
+
 Review key python concepts (see references below):   
 - dicts; classes and objects
 - exceptions
 
+**pedantic_prep.py**
+
 Review pydantic
 - basic model usage
 
+**pymongo_prep.py**
+
 Review pymongo tutorial(s) for key concepts:
 * Connect to Db
+    - Use the URI from above to connect to your DB
 * CRUD operations: 
     - Create: Adding new records to a database (insert)
     - Read: Retrieving data from a database (find)
     - Update: Modifying existing records in a database (update)
     - Delete: Removing existing records from a database (delete)
 
-### References
+## References
 
 Python references:
 * https://www.w3schools.com/python/default.asp
