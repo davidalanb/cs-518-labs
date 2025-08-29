@@ -1,14 +1,7 @@
 import unittest
 
-from pymongo.errors import DuplicateKeyError
-
-# from db_manager import DBManager
-
-from user_manager import UserManager
-from user_models import *
-
-conn_str = "YOUR URL HERE"
-um = UserManager(conn_str)
+from user_api import UserAPI
+um = UserAPI()
 
 class TestUserManager(unittest.TestCase):
 
@@ -18,10 +11,12 @@ class TestUserManager(unittest.TestCase):
 
         um.delete_all()
 
-        u = User(username='joe',password='pw')
-        uid = um.create(u.model_dump())
+        u = {'username':'joe','password':'pw'}
+        uid = um.create(u)
 
         u = um.read_by_id(uid)
+        print(u)
+
         self.assertIsNotNone(u)
 
     # @unittest.skip
@@ -30,14 +25,13 @@ class TestUserManager(unittest.TestCase):
 
         um.delete_all()
 
-        u = User(username='joe',password='pw')
-        uid = um.create(u.model_dump())
+        u = {'username':'joe','password':'pw'}
+        uid = um.create(u)
 
         try:
-            uid = um.create(u.model_dump())
-        except DuplicateKeyError as e:
-            # print(e)
-            pass
+            uid = um.create(u)
+        except Exception as e:
+            print(e)
         else:
             raise Exception('should have been an error here')
 
@@ -47,36 +41,34 @@ class TestUserManager(unittest.TestCase):
 
         um.delete_all()
 
-        u = User(username='joe',password='pw')
-        uid = um.create(u.model_dump())
-
-        u = User(username='jane',password='pw')
-        uid = um.create(u.model_dump())
+        us = [{'username':'joe','password':'pw'},
+            {'username':'jane','password':'pw'}]
+        
+        for u in us:
+            uid = um.create(u)
 
         us = um.read_all()
-        self.assertEqual(len(us),2)
+        self.assertEqual(len(us.get('users')),2)
 
-        q = UserQuery(username='jane')
-        us = um.read(q.model_dump())
-
-        u_out = User(**us[0])
-        self.assertEqual(u_out.username,'jane')
-
+        q = {'username':'jane'}
+        us = um.read(q)
+        u = us.get('users')[0]
+        self.assertEqual(u.get('username'),'jane')
+        
     # @unittest.skip
     def test_update(self):
         ''' update password '''
 
         um.delete_all()
 
-        u = User(username='joe',password='pw')
-        uid = um.create(u.model_dump())
+        u = {'username':'joe','password':'pw'}
+        uid = um.create(u)
 
-        updates = UserUpdate(password='newpw')
-        um.update(uid,updates.model_dump())
+        updates = {'password':'newpw'}
+        um.update(uid,updates)
 
         u = um.read_by_id(uid)
-        u = User(**u)
-        self.assertEqual(u.password,'newpw')
+        self.assertEqual(u.get('password'),'newpw')
 
     # @unittest.skip
     def test_delete(self):
@@ -84,14 +76,15 @@ class TestUserManager(unittest.TestCase):
 
         um.delete_all()
 
-        u = User(username='joe',password='pw')
-        uid = um.create(u.model_dump())
+        u = {'username':'joe','password':'pw'}
+        uid = um.create(u)
 
         result = um.delete_by_id(uid)
         self.assertEqual(result,1)
 
         u = um.read_by_id(uid)
         self.assertIsNone(u)
+
 
 if __name__ == '__main__':
     unittest.main()

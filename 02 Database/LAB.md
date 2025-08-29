@@ -7,10 +7,8 @@ Goal:
 Submission:
 
 * Sign up for the course on Gradescope using this code: 7X7RNJ
-* Submit these files to assignment "Database 1":
+* Submit this files to assignment "Database 1":
     - db_manager.py
-    - user_manager.py
-    - user_models.py
 
 ## Setup
 
@@ -18,7 +16,7 @@ Setup:
 
 * Create the initial directory structure for your project.  In this example, demo-project is the root of my repo:
     - demo-project/app/users/data
-* Copy the files from the "code" directory into this directory.
+* Copy the files from the "starter_code" directory into this directory.
 
 Notes:
 
@@ -29,9 +27,9 @@ Notes:
 
 Explore the user models:
 
-* See "user_models.py" in the code folder
+* See "user_models.py" in the starter_code folder
     - these models are implemented for you
-* See "validate_users.py"
+* See "validate_users.py" 
     * Describe the three users / cases here
     * What result do you get in each case?  why?
 

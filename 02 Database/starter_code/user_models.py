@@ -1,7 +1,7 @@
 from enum import Enum
 from bson import ObjectId
 from pydantic import BaseModel, Extra, Field
-from typing import Optional
+from typing import List, Optional
 
 class User(BaseModel):
     id: str = Field(alias='_id',default=None)
@@ -10,7 +10,7 @@ class User(BaseModel):
     admin: Optional[bool] = False
 
 class UserCollection(BaseModel):
-    users: list[User]
+    users: List[User]
 
 class UserQuery(BaseModel):
     username: Optional[str] = None
