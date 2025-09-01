@@ -1,8 +1,6 @@
 # labs
 
 asdf
-qwer
-zxcv
 
 ## Getting started
 
