@@ -1,9 +1,6 @@
 # labs
 
-Hmm
-all main
-test
-test test test
+Labs
 
 ## Getting started
 
