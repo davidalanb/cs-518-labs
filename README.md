@@ -1,7 +1,6 @@
 # labs
 
-asdf
-all
+Hmm
 
 ## Getting started
 
