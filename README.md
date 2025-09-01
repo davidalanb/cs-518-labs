@@ -1,6 +1,7 @@
 # labs
 
 Hmm
+all main
 
 ## Getting started
 
