@@ -1,6 +1,7 @@
 # labs
 
 asdf
+all
 
 ## Getting started
 
