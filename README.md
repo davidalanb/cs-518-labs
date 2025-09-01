@@ -2,6 +2,7 @@
 
 Hmm
 all main
+test
 
 ## Getting started
 
