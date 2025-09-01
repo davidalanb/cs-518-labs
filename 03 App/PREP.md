@@ -1,10 +1,10 @@
 ### Instructions
 
-Read the articles and do the quickstart.
-
 Submit:
-* written response (~200 words - shorter than usual because there is also code)
+* written response
 * flask code for quickstart
+
+Rought guidelins - ~400 words total (response + code).
 
 ### Links
 
@@ -19,4 +19,5 @@ Flask
 * https://flask.palletsprojects.com/en/stable/quickstart/ 
 * Up to and including "The Request Object"
 
-Blueprints
+Jinja:
+https://jinja.palletsprojects.com/en/stable/templates/

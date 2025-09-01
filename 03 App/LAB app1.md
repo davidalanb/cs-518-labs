@@ -10,43 +10,42 @@
 
 ### structure
 
-app structure:
-* app/
-  * users/
-    * data/
-    * templates/
-      * create.html
-      * users.html		<- user listing page
-    * routes.py
-  * templates/
-    * index.html
-  * app.py
+See starter_code/README.md for directory structure
+
+Note that there are two different 'templates' directories.
 
 ### Directions
+
+First review all starter_code and check your understanding.
 
 Index:
 * app.py: index route ('/')
 * templates/index.html - welcome message
 
-Blueprints:
+Header:
+* templates/header.html - dynamic links to index, create user, and view users
+  - use url_for
+  - include header in index
+
+<!-- Blueprints:
 * setup blueprints in app.py and users/routes.py
 * in users/routes.py, setup routes to create and users.
-* templates/header.html - dynamic links to index, create user, and view users
+* templates/header.html - dynamic links to index, create user, and view users -->
 
 List users:
 * users/routes.py: 
   * In the list_users route, you will need to get the user data.  You have two options for doing this:
     * A) mockup some data (helpful at first)
     * B) read data from your DB. (you'll need to do this anyway) 
-  * After getting the data, validate it and pass it to render_template
-* users.html: In your listing page, use a jinja for-loop to create a list or table of users.
+  * Pass the user data to render_template
+* users/templates/users.html: In your listing page, use a jinja for-loop to create a list or table of users.
 
 Create user:
 * users/templates/create.html:
   - create a form for submitting new user data
 * users/routes.py: make a 'create' route that handles GET and POST
   - GET: serve create form
-  - POST: get form data, validate, and make a DB create operation
+  - POST: get form data and make a DB create operation
 
 View / update user:
 * users/templates/view.html:
