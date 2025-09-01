@@ -2,7 +2,7 @@
 
 Hmm
 all main
-test2
+test
 
 ## Getting started
 
