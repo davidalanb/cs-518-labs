@@ -5,11 +5,12 @@ um = UserAPI()
 
 class TestUserManager(unittest.TestCase):
 
+    def setUp(self):
+        um.delete_all()
+
     # @unittest.skip
     def test_basic(self):
         ''' Initialize, create user, read_by_id user'''
-
-        um.delete_all()
 
         u = {'username':'joe','password':'pw'}
         uid = um.create(u)
@@ -22,8 +23,6 @@ class TestUserManager(unittest.TestCase):
     # @unittest.skip
     def test_unique(self):
         ''' try to create a user with the same username twice'''
-
-        um.delete_all()
 
         u = {'username':'joe','password':'pw'}
         uid = um.create(u)
@@ -38,8 +37,6 @@ class TestUserManager(unittest.TestCase):
     # @unittest.skip
     def test_reads(self):
         ''' read all, read by username'''
-
-        um.delete_all()
 
         us = [{'username':'joe','password':'pw'},
             {'username':'jane','password':'pw'}]
@@ -59,8 +56,6 @@ class TestUserManager(unittest.TestCase):
     def test_update(self):
         ''' update password '''
 
-        um.delete_all()
-
         u = {'username':'joe','password':'pw'}
         uid = um.create(u)
 
@@ -73,8 +68,6 @@ class TestUserManager(unittest.TestCase):
     # @unittest.skip
     def test_delete(self):
         '''reset, create, delete, read'''
-
-        um.delete_all()
 
         u = {'username':'joe','password':'pw'}
         uid = um.create(u)

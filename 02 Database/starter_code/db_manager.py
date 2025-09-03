@@ -15,7 +15,8 @@ class DBManager:
         '''create user and return inserted_id'''
 
     def read_by_id(self, obj_id:str):
-        '''read user by id and return one'''
+        '''read user by id and return one
+        return None if user not found'''
         
     def read(self,query:dict):
         '''read by query and return many'''

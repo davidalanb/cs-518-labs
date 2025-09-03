@@ -5,6 +5,7 @@ if __name__=="__main__":
 
     users = [
         {'username': 'joe', 'password': 'schmoe'},
+        {'username':'joe','password':12345,'extra':'ex'},
         {'username':'joe'},
         {'username':'joe','password':'schmoe','extra':'ex'}
     ]

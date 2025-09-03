@@ -20,7 +20,7 @@ class UserAPI:
 
         u = um.read_by_id(uid)
 
-        if u:   
+        if u: # != None
             return User(**u).model_dump()
     
     def read_all(self) -> dict:
