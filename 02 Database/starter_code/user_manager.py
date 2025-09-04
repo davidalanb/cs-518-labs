@@ -13,13 +13,13 @@ class UserManager(DBManager):
         super().__init__(conn_str,'user_database','users')
         self.col.create_index("username", unique=True)  
 
-    def create(self, u):
+    # def create(self, u):
 
-        try:
-            uid = super().create(u)
-        except DuplicateKeyError as e:
-            raise Exception("username must be unique")
-        else:
-            return uid
+    #     try:
+    #         uid = super().create(u)
+    #     except DuplicateKeyError as e:
+    #         raise Exception("username must be unique")
+    #     else:
+    #         return uid
 
 

@@ -13,7 +13,7 @@ class UserCollection(BaseModel):
     users: List[User]
 
 class UserQuery(BaseModel):
-    username: Optional[str] = None
+    username: str#Optional[str] = None
 
 class UserUpdate(BaseModel):
-    password:Optional[str]=None
+    password:str#Optional[str]=None

@@ -7,7 +7,7 @@ Goal:
 Submission:
 
 * Sign up for the course on Gradescope using this code: 7X7RNJ
-* Submit this files to assignment "Database 1":
+* Submit this file to assignment "Database 1":
     - db_manager.py
 
 ## Setup

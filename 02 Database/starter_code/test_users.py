@@ -1,12 +1,20 @@
 import unittest
 
+from user_manager import UserManager
 from user_api import UserAPI
-um = UserAPI()
+
+# conn_str = "<YOUR ATLAS CLUSTER URI>"
+conn_str = "mongodb://localhost:27017/"
+umngr = UserManager(conn_str)
+um = UserAPI(umngr)
 
 class TestUserManager(unittest.TestCase):
 
     def setUp(self):
+        ''' executes before each test'''
+
         um.delete_all()
+        print(self.id())
 
     # @unittest.skip
     def test_basic(self):
@@ -20,7 +28,7 @@ class TestUserManager(unittest.TestCase):
 
         self.assertIsNotNone(u)
 
-    # @unittest.skip
+    @unittest.skip
     def test_unique(self):
         ''' try to create a user with the same username twice'''
 
@@ -34,7 +42,7 @@ class TestUserManager(unittest.TestCase):
         else:
             raise Exception('should have been an error here')
 
-    # @unittest.skip
+    @unittest.skip
     def test_reads(self):
         ''' read all, read by username'''
 
@@ -47,12 +55,14 @@ class TestUserManager(unittest.TestCase):
         us = um.read_all()
         self.assertEqual(len(us.get('users')),2)
 
+        # make some more assertions about the content of 'us'
+
         q = {'username':'jane'}
         us = um.read(q)
         u = us.get('users')[0]
         self.assertEqual(u.get('username'),'jane')
         
-    # @unittest.skip
+    @unittest.skip
     def test_update(self):
         ''' update password '''
 
@@ -65,7 +75,7 @@ class TestUserManager(unittest.TestCase):
         u = um.read_by_id(uid)
         self.assertEqual(u.get('password'),'newpw')
 
-    # @unittest.skip
+    @unittest.skip
     def test_delete(self):
         '''reset, create, delete, read'''
 

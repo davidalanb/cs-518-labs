@@ -1,5 +1,13 @@
 from flask import Blueprint, flash, redirect, render_template, request, url_for
 
+from accounts.data.user_manager import UserManager
+from accounts.data.user_api import UserAPI
+
+# conn_str = "<YOUR ATLAS CLUSTER URI>"
+conn_str = "mongodb://localhost:27017"
+umngr = UserManager(conn_str)
+um = UserAPI(umngr)
+
 accounts = Blueprint('accounts', __name__,
                         template_folder='templates')
 
@@ -20,6 +28,10 @@ def view(username):
     on POST, get form data and update user'''
 
     return "view / update users"
+
+@accounts.post('/users/delete/all')
+def delete_all():
+    return "delete all users"
 
 @accounts.post('/users/delete/<username>')
 def delete(username):
