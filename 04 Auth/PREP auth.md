@@ -2,7 +2,8 @@
 
 Review security concepts:
 * https://www.computer.org/resources/software-security
-* https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html
+    - optional: SWEBOK ch.13
+* https://www.ibm.com/think/topics/authentication
 
 ## Flask-login
 
@@ -10,4 +11,4 @@ Ref:
 * https://flask-login.readthedocs.io/en/latest/ 
 
 Install flask-login
-Review the documentation
+Review the documentation - you can just scan it, it is not trivial to get it working
