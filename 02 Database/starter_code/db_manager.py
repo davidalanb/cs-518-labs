@@ -12,27 +12,80 @@ class DBManager:
         self.col = mydb[col]
 
     def create(self, d: dict):
-        '''create user and return inserted_id'''
+        '''create user
+        
+        args:
+            d (dict): data to insert into db
+        
+        returns:
+            id (str): object_id as a str
+        '''
 
     def read_by_id(self, obj_id:str):
-        '''read user by id and return one
-        return None if user not found'''
+        '''read user by id 
+                
+        args:
+            obj_id (str): 
+
+        returns:
+            data (dict): data retrieved, or None
+        '''
         
     def read(self,query:dict):
-        '''read by query and return many'''
+        '''read many by query
+        
+        args:
+            query (dict)
+
+        returns:
+            data (list): convert Cursor to list for return
+        '''
     
     def read_all(self):
-        '''read all and return many'''
+        '''read all
+        
+        returns:
+            data (list)
+        '''
 
     def update(self,obj_id,updates:dict):
-        ''' update by id and return modified_count '''
+        ''' update by id 
+        
+        args:
+            obj_id (str)
+            updates (dict)
+        
+        returns:
+            modified_count (int)
+        '''
 
     def delete_by_id(self,obj_id):
-        ''' delete by id and return deleted_count '''
+        ''' delete by id
+        
+        args:
+            obj_id (str)
+
+        returns:
+            deleted_count (int)
+        '''
     
     def delete(self,query:dict):
-        ''' update by query and return deleted_count '''
+        ''' delete many by query 
+        
+        args:
+            query (dict)
+
+        returns:
+            deleted_count (int)
+        '''
     
     def delete_all(self):
+        ''' delete all
+
+        returns:
+            deleted_count (int)
+        '''
+
+
         result = self.col.delete_many({})
         return result.deleted_count              
