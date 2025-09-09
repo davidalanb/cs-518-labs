@@ -71,6 +71,15 @@ Review pymongo tutorial(s) for key concepts:
     - Update: Modifying existing records in a database (update)
     - Delete: Removing existing records from a database (delete)
 
+## ServerSelectionTimeoutError Fix
+
+If you happen to receive an error with the message "ServerSelectionTimeoutError [SSL: CERTIFICATE_VERIFY_FAILED]..." while trying to connect to MongoDB, this seems to be caused by MongoDB's digital certificate not appearing on your computer's trusted certificate list for some reason.
+
+To fix this, you can install the "certifi" module on your machine (either through pip or your IDE's Python module manager), and then modify your __init__ function in DBManager.py by changing:
+
+* "myclient = pymongo.MongoClient(conn_str)" to
+* "myclient = pymongo.MongoClient(conn_str, tlsCAFile=certifi.where())"
+
 ## References
 
 Python references:
