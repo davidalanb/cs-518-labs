@@ -74,11 +74,15 @@ pip install flask_login
     <!-- * GET/POST  /signup -->
 * login required - only view / update / delete your own data:
     * GET       /users/<username>
+        - other usernames should return 404, even if the other user exists
     <!-- * POST      /users/<username>
     * POST      /users/delete/<username> -->
     * POST      /logout
 * admin only:
     * GET       /users/
+        - returns 401 if not logged in (not authenticated)
+        - 403 is regular user logged in (not authorized)
+    * GET       /users/create
     * POST      /users/create
     * POST      /users/delete/all
         - make sure that this will keep the 'admin' user
