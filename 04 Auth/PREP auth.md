@@ -3,6 +3,7 @@
 Requirements:
 * text response to the readings
 * summarize key concepts
+* please submit ~400 word summary to Canvas
 
 ## Security concepts
 

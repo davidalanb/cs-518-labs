@@ -2,6 +2,13 @@
 
 # Implementing login in your app
 
+Submission:
+
+* Zip everything and submit to Gradescope.
+    - your code should connect to your Atlas cloud DB.
+    - make sure you have an admin / admin user.
+* Also push your latest code to Gitlab.
+
 ## Grading
 
 We will run your app and also look at the code:
@@ -57,3 +64,25 @@ pip install flask_login
 
 * ensure that each user can only access the appropriate content
     - use @login_required and/or conditional logic with current_user in your routes
+
+## Details
+
+* no login required:
+    * GET       /
+    * GET       /login
+    * POST      /login
+    <!-- * GET/POST  /signup -->
+* login required - only view / update / delete your own data:
+    * GET       /users/<username>
+    <!-- * POST      /users/<username>
+    * POST      /users/delete/<username> -->
+    * POST      /logout
+* admin only:
+    * GET       /users/
+    * POST      /users/create
+    * POST      /users/delete/all
+        - make sure that this will keep the 'admin' user
+===
+Lab scope:
+    * only need to worry about limited scope
+    * 

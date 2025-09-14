@@ -82,6 +82,19 @@ Delete user:
   - add a second form to delete user
   - form should post to delete user route.
 
+Delete all users:
+
+* This is an API call to delete all of the users in your DB, for testing purposes
+* code:
+
+```python
+@accounts.route('/users/delete/all', methods=['POST'])
+def delete_all():
+
+    n = um.delete_all()
+    return f"deleted {n} users"
+```
+
 Note:
 
 * flash messages when necessary, and redirect appropriately

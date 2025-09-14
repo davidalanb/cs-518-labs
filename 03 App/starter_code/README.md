@@ -1,9 +1,11 @@
 # Find a Guide
 
 Name: 
-Credits:  
-    * any notes about collaboration, use of AI, etc.
-    * you can collaborate about ideas and even show code, but you shouldn't share code
+
+Credits:
+
+* any notes about collaboration, use of AI, etc.
+* you can collaborate about ideas and even show code, but you shouldn't share code
 
 ## Repo structure
 
