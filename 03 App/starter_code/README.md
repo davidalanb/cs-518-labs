@@ -15,9 +15,11 @@ repo structure:
             * user_manager.py
             * db_manager.py
             * user_tests.py
+            * user_models.py
         * templates/
             * create.html
-            * users.html		
+            * users.html
+            * view.html
         * routes.py
     * templates/
         * index.html    
