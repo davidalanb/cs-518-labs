@@ -1,12 +1,21 @@
 ## Flask 1
 
-### Submission and grading
+### Submission
+
+Gradescope
+
+* Make a zip with all of the files in your entire app directory (don't zip the directory itself)
+* The structure should be like the starter code:
+  - app_submission.zip (or something like that)
+    * accounts/
+    * templates/
+    * app.py
+* Submit to Gradescope app
+
+Gitlab repo:
 
 * Add your updated code to your repo
-  - make sure you follow the directory structure below
-* Submit your repo URL to Canvas 
-  - graders will pull your code and run your app
-* Grading rubric below
+* Submit your repo URL to Canvas.
 
 ### structure
 
@@ -19,10 +28,9 @@ Note that there are two different 'templates' directories.
 First review all starter_code and check your understanding.
 
 Index:
+
 * app.py: index route ('/')
 * templates/index.html - welcome message
-
-Header:
 * templates/header.html - dynamic links to index, create user, and view users
   - use url_for
   - include header in index
@@ -33,39 +41,55 @@ Header:
 * templates/header.html - dynamic links to index, create user, and view users -->
 
 List users:
-* users/routes.py: 
-  * In the list_users route, you will need to get the user data.  You have two options for doing this:
-    * A) mockup some data (helpful at first)
-    * B) read data from your DB. (you'll need to do this anyway) 
-  * Pass the user data to render_template
-* users/templates/users.html: In your listing page, use a jinja for-loop to create a list or table of users.
 
-Create user:
+* users/routes.py: ('/users/)
+  * read data from your DB. 
+  * Pass the user data to render_template
+* users/templates/users.html: 
+  - In your listing page, use a jinja for-loop to create a table of users.
+  - **you must use a table here**
+
+Create user: 
+
+* users/routes.py: ('/users/create') 
+  - make a 'create' route that handles GET and POST
+    - GET: serve create form
+    - POST: get form data and make a DB create operation
 * users/templates/create.html:
   - create a form for submitting new user data
-* users/routes.py: make a 'create' route that handles GET and POST
-  - GET: serve create form
-  - POST: get form data and make a DB create operation
+  - **form input names must be 'username' and 'password'**
 
-View / update user:
+View / update user: 
+
+* users/routes.py: ('/users/<username>')
+  - make a view user route, that handles GET and POST
+    - GET: get user data and serve the populated view form
+    - POST: get user form data to and update by user id
 * users/templates/view.html:
   - create a form for viewing / updating user data
-* users/routes.py: make a view user route with a route parameter for username ('/view/<username>'), that handles GET and POST
-  - GET: get user data and serve the populated view form
-  - POST: get user form data to and update by user id
-* users/templates/users.html: Make your user listing page link to individual users
+  - **form input names must be 'username' and 'password'**
+
+User listing update: 
+
+* users/templates/users.html:  
+  - Make your user listing page link to individual users
 
 Delete user:
+
+* users/routes.py: ('/users/delete/<username>')
+  - make a delete route that performs the delete
 * users/templates/view.html:
   - add a second form to delete user
-* users/routes.py: make a delete route that performs the delete
+  - form should post to delete user route.
 
 Note:
+
 * flash messages when necessary, and redirect appropriately
 
 ### Grading
 
 criteria:
+
 * [5] create user
     * GET: show create user form
     * POST: [fail] username taken -> reload with error msg

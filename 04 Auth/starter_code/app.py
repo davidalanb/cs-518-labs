@@ -17,3 +17,6 @@ def load_user(user_id):
 
 ## routes 
 # (code omitted)
+
+if __name__=="__main__":
+    app.run(debug=True)

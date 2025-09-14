@@ -4,7 +4,7 @@ Submit:
 * written response
 * flask code for quickstart
 
-Rought guidelins - ~400 words total (response + code).
+Rought guideline - ~400 words total (response + code).
 
 ### Links
 

@@ -1,3 +1,9 @@
+# Auth prep
+
+Requirements:
+* text response to the readings
+* summarize key concepts
+
 ## Security concepts
 
 Review security concepts:
