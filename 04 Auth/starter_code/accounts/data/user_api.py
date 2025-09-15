@@ -1,2 +1,6 @@
+# already implemented
+
 class UserAPI:
-    pass
+
+    def __init__(self, user_mngr):
+        pass

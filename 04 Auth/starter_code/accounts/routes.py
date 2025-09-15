@@ -2,11 +2,16 @@ from flask import Blueprint, request, render_template, flash, redirect, url_for
 from flask_login import current_user, login_required, login_user, logout_user
 
 from accounts.user_login import UserLogin
-from accounts.data.user_api import UserAPI
-um = UserAPI()
+# um = UserAPI()
+
+'''
+    Update for auth lab: use current_app.um wherever you used um before
+'''
 
 accounts = Blueprint('accounts', __name__,
                         template_folder='templates')
+
+#------------------- routes---------------------------
 
 @accounts.route('/login', methods=['GET','POST'])
 def login():
