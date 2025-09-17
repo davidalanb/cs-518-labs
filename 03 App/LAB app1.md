@@ -99,6 +99,15 @@ Note:
 
 * flash messages when necessary, and redirect appropriately
 
+### Testing
+
+* To run the tests, you'll need:
+
+```
+pip install bs4
+pip install lxml
+```
+
 ### Grading
 
 criteria:
