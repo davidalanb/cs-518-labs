@@ -33,7 +33,7 @@ app.register_blueprint(accounts)
 #------------------Login------------------------------
 
 app.test_client_class = FlaskLoginClient 
-UserLogin.setup_db(app.um)
+# UserLogin.setup_db(app.um)
 
 login_manager = LoginManager()
 login_manager.init_app(app)

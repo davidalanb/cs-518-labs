@@ -15,6 +15,9 @@ accounts = Blueprint('accounts', __name__,
 
 @accounts.route('/login', methods=['GET','POST'])
 def login():
+    '''on GET, serve login page.  on POST, authenticate and login
+    use current_app.um to access UserAPI / UserManager
+    '''
 
     if request.method=='GET':
         return render_template('login.html')
@@ -23,7 +26,7 @@ def login():
 
     ''' TODO
     # get username and password from form
-    # set users (read users from db by query)
+    # read users from db by query
     '''    
 
     if users:

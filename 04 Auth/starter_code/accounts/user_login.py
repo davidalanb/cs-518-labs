@@ -15,13 +15,14 @@ class UserLogin(UserMixin):
         self.username = username
         self.admin=admin
 
-    @staticmethod
-    def setup_db(um):
-        UserLogin.um = um
+    # @staticmethod
+    # def setup_db(um):
+    #     UserLogin.um = um
 
     @staticmethod
     def get(user_id):
-        ''' get user by id; construct and return User object'''
+        ''' get user by id; construct and return User object
+        use current_app.um to access UserAPI / UserManager'''
 
         u = None
         # TODO: read user by id
