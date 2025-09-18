@@ -1,23 +1,25 @@
-concepts:
+instructions:
+
+* please review the resources and concepts below.  
+* summarize key concepts (~400 words)
 
 primary:
 
-https://www.ibm.com/think/topics/cloud-computing 
-https://www.redhat.com/en/topics/cloud-computing
-    https://www.redhat.com/en/topics/cloud-computing/iaas-vs-paas-vs-saas 
+* [cloud computing](https://www.ibm.com/think/topics/cloud-computing)
+    - what is cloud computing
+    - benefits
+    - components
+    - services
+    - serverless
+    - cloud security
 
-other:
+* [virtualization](https://www.ibm.com/think/topics/virtualization)
+    - what is virtualization
+    - benefits
+    - components
+    - types
+    - virualiation vs containerization
 
-https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-cloud-computing 
-https://cloud.google.com/learn/what-is-cloud-computing
+* [containers vs VMs](https://www.ibm.com/think/topics/containers-vs-vms)
 
-azure:
 
-https://learn.microsoft.com/en-us/azure/container-apps/compare-options 
-
---
-
-* cloud
-* providers
-    * Azure
-* Azure app service
