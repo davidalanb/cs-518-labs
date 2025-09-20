@@ -86,7 +86,7 @@ pip install flask_login
     * POST      /users/create
     * POST      /users/delete/all
         - make sure that this will keep the 'admin' user
-===
+
+
 Lab scope:
-    * only need to worry about limited scope
-    * 
+* only need to worry about limited scope.

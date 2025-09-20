@@ -11,7 +11,13 @@ from accounts.user_login import UserLogin
 accounts = Blueprint('accounts', __name__,
                         template_folder='templates')
 
-#------------------- routes---------------------------
+#---------------------- CRUD routes -----------------------
+
+'''
+    CRUD routes from previous lab
+'''
+
+#------------------- login routes---------------------------
 
 @accounts.route('/login', methods=['GET','POST'])
 def login():
@@ -26,7 +32,7 @@ def login():
 
     ''' TODO
     # get username and password from form
-    # read users from db by query
+    # read user using the 'authenticate' method
     '''    
 
     if users:

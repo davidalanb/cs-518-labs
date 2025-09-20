@@ -25,7 +25,7 @@ class UserLogin(UserMixin):
         use current_app.um to access UserAPI / UserManager'''
 
         u = None
-        # TODO: read user by id
+        # TODO: read user by using the 'authenticate' method
 
         if u:
             # TODO: get id, username, admin fields
