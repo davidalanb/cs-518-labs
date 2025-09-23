@@ -31,3 +31,13 @@ flask-login
 * run commands (run from src, directory containing app.py):
     - ```az login```
     - ```az webapp up --runtime PYTHON:3.11 --sku F1 --logs```
+
+
+## FAQ
+
+If you encounter a regions error:
+
+```
+az provider register --namespace Microsoft.Web
+az webapp up --runtime PYTHON:3.11 --sku F1 --logs --location eastus2
+```
