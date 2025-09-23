@@ -19,7 +19,7 @@
 
 * steps:
     - make sure that your app is connecting to Atlas DB, not localhost
-    - setup requirements.txt
+    - setup requirements.txt (goes in src, adjacent to app.py)
 
 ```
 pydantic
@@ -28,6 +28,6 @@ flask
 flask-login
 ```
 
-* run commands:
+* run commands (run from src, directory containing app.py):
     - ```az login```
     - ```az webapp up --runtime PYTHON:3.11 --sku F1 --logs```
