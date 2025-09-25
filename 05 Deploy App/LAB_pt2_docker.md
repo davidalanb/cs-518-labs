@@ -48,3 +48,5 @@ Submit:
 
 * Option B. Azure container registry
     - Bonus:deploy your app using Azure container apps 
+
+* Ref: [Deploy with ACA](https://gitlab.cs.unh.edu/cs518-public/spring-2025/labs-2025-01_spring/-/blob/main/weekA-deploy/lab10%20instructions.md?ref_type=heads)
