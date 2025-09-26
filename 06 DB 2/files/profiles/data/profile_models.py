@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 
 class Profile(BaseModel):
     id: str = Field(alias='_id',default=None)
-    user_id: str
+    username: str
     profile_name: str
     skills: Optional[List[str]] = []
 
@@ -15,8 +15,12 @@ class ProfileCollection(BaseModel):
 
 class ProfileQuery(BaseModel):
     user_id: Optional[str]=None
+    username: Optional[str]=None
+    profile_name: Optional[str]=None
 
-class ProfileUpdate(BaseModel):
-    skills: Optional[List[str]] = []
+class ProfileSkills(BaseModel):
+    skills: List[str]
+
+
 
     
