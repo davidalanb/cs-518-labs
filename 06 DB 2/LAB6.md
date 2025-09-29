@@ -31,9 +31,22 @@
 * etc.
 ```
 
-### Add new method to db_manager
+### Add new methods to db_manager
 
-* As the name implies, this will take an id and a fieldname, and add each item provided
+create_index:
+
+* creates an index. Defaults to unique.
+
+```python
+# put create_index after __init__
+
+def create_index(self,ix, unique=True):
+    self.col.create_index(ix, unique=unique) 
+```
+
+add_to_set:
+
+* this will take an id and a fieldname, and add each item provided
 * remember data_manager is generic
 * Assumptions:
     - pid is a string representation of an ObjectId
@@ -41,7 +54,10 @@
     - add_these is a list of strings
 
 ```python
+# Put add_to_set with update method(s).
+
 def add_to_set(self,pid: str,field: str,add_these: list[str]):
+    '''take an id and a set fieldname, and add each item provided'''
 
     r = self.col.update_one({'_id':pid},
             { "$addToSet": { field: {'$each': add_these } }}
