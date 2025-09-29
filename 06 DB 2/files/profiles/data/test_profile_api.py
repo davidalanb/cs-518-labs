@@ -2,10 +2,7 @@ import unittest
 
 from pydantic import ValidationError
 
-from utils.db_manager import DBManager
-
 try:
-    # from blueprints.guides.data.profile_manager import ProfileManager
     from blueprints.guides.data.profile_api import ProfileAPI
     from blueprints.guides.data.profile_models import *
 except ModuleNotFoundError:

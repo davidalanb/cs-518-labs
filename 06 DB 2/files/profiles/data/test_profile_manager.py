@@ -6,7 +6,7 @@ try:
     from utils.db_manager import DBManager
     from blueprints.guides.data.profile_manager import ProfileManager#, AdventureManager
     from blueprints.guides.data.profile_models import *
-except:
+except ModuleNotFoundError:
     from profiles.data.db_manager import DBManager
     from profiles.data.profile_manager import ProfileManager#, AdventureManager
     from profiles.data.profile_models import *
