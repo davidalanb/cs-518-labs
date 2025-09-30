@@ -2,13 +2,12 @@ import unittest
 # from datetime import datetime
 
 try:
-    # from db_manager import DBManager
-    from utils.db_manager import DBManager
-    from blueprints.guides.data.profile_manager import ProfileManager#, AdventureManager
-    from blueprints.guides.data.profile_models import *
+    from db_manager import DBManager
+    from profile_manager import ProfileManager
+    from profile_models import *
 except ModuleNotFoundError:
     from profiles.data.db_manager import DBManager
-    from profiles.data.profile_manager import ProfileManager#, AdventureManager
+    from profiles.data.profile_manager import ProfileManager
     from profiles.data.profile_models import *
 
 try:
@@ -22,10 +21,6 @@ from config import GUIDE_CONFIG
 cs = GUIDE_CONFIG.DB_URL
 db = GUIDE_CONFIG.GUIDE_DB
 col = GUIDE_CONFIG.PROFILE_COL
-
-# conn_str = "mongodb+srv://student123:student123@cluster0.n5ntvo6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
-# am = AdventureManager(conn_str)
 
 class TestProfiles(unittest.TestCase):
 
