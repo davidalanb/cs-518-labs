@@ -3,8 +3,8 @@ import unittest
 from pydantic import ValidationError
 
 try:
-    from blueprints.guides.data.profile_api import ProfileAPI
-    from blueprints.guides.data.profile_models import *
+    from profile_api import ProfileAPI
+    from profile_models import *
 except ModuleNotFoundError:
     from profiles.data.profile_api import ProfileAPI
     from profiles.data.profile_models import *

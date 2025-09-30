@@ -1,5 +1,4 @@
 import unittest
-# from datetime import datetime
 
 try:
     from db_manager import DBManager

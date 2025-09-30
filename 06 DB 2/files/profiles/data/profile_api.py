@@ -1,6 +1,9 @@
-# TODO: fix these
-from blueprints.guides.data.profile_manager import ProfileManager
-from blueprints.guides.data.profile_models import *
+try:
+    from profile_manager import ProfileManager
+    from profile_models import *
+except ModuleNotFoundError:
+    from profiles.data.profile_manager import ProfileManager
+    from profiles.data.profile_models import *
 
 class ProfileAPI:
     ''' these functions will take and return plain python data
