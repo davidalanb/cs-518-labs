@@ -1,6 +1,10 @@
-# TODO: fix these
-from utils.db_manager import DBManager
-from blueprints.guides.data.profile_models import *
+
+try:
+    from db_manager import DBManager
+    from profile_models import *
+except ModuleNotFoundError:
+    from profiles.data.db_manager import DBManager
+    from profiles.data.profile_models import *    
 
 class ProfileManager:
     '''

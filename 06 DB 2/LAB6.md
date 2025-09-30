@@ -8,13 +8,13 @@
 2. Create data models
 3. Implement data management
 
-### Setup
+## Setup
 
 * This module will carry your Profile management capabilities
 * Create the directory structure below.
 
 ```
-* accounts/
+* accounts/       <-- unchanged
 * profiles/       <-- new for this week
     * data/
         - profile_models.py
@@ -31,7 +31,7 @@
 * etc.
 ```
 
-### Add new methods to db_manager
+## Add new methods to db_manager
 
 create_index:
 
@@ -66,11 +66,11 @@ def add_to_set(self,pid: str,field: str,add_these: list[str]):
     return r.modified_count   
 ```
 
-### Create data models
+## Create data models
 
 * Provided in repo.
 
-### Component relationships
+## Component relationships
 
 * Relationships:
     - profile_manager should have an association relationship with db_manager
@@ -87,5 +87,11 @@ def add_to_set(self,pid: str,field: str,add_these: list[str]):
 
 * Carefully review the starter code.
 
-# Implementation
+## Implementation
+
+### Profile Manager
+
+### Profile API
+
+
 

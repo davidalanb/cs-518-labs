@@ -97,8 +97,8 @@ class TestProfiles(unittest.TestCase):
         p = self.pm.read_by_id(pid)
         # p = Profile(**p)
         # print(p)
-        self.assertEqual(len(p.skills),3)#"lead climbing",p.skills)
-        # self.assertTrue(a.guides)
+
+        self.assertEqual(len(p.skills),3)
 
 if __name__ == '__main__':
     unittest.main()
