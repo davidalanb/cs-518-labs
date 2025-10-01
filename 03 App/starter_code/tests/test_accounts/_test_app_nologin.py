@@ -4,16 +4,16 @@ from bs4 import BeautifulSoup as bs
 import unittest
 from datetime import datetime
 
-# get path for root_dir
-# ancestors are: accounts, tests, and root
-root_dir = Path(__file__).resolve().parent.parent.parent
-print(root_dir)
+# # get path for root_dir
+# # ancestors are: accounts, tests, and root
+# root_dir = Path(__file__).resolve().parent.parent.parent
+# print(root_dir)
 
-# add root and src to the path
-sys.path.append(str(root_dir))
-sys.path.append(str(root_dir/'src'))
+# # add root and src to the path
+# sys.path.append(str(root_dir))
+# sys.path.append(str(root_dir/'src'))
 
-from src.app import app
+from app import app
 
 try:
     from gradescope_utils.autograder_utils.decorators import weight, number

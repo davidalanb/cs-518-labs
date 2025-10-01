@@ -1,5 +1,9 @@
 import importlib
+import sys
 from flask import Flask, render_template
+
+print(sys.path[0])
+
 from accounts.routes import accounts
 
 from accounts.data.user_api import UserAPI

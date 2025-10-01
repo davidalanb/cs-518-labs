@@ -2,31 +2,16 @@ import unittest
 from pathlib import Path
 import sys
 
-''' This is the right way to do it, 
-but you have to install your local project in editable mode for it to work
-see README.md'''
+''' To run these tests, either:
+(A) use a test runner, or
+(B) install your local project in editable mode
+see notes.
+'''
 
-# # import statements start with src so that pylance / code completions will work
-# from accounts.data.user_manager import UserManager
-# from accounts.data.user_api import UserAPI
-# from utils.db_manager import DBManager
-# import config as config
-
-''' This is the hack '''
-
-# get path for root_dir
-# ancestors are: data, accounts, tests, and root
-root_dir = Path(__file__).resolve().parent.parent.parent.parent
-
-# add root and src to the path
-sys.path.append(str(root_dir))
-sys.path.append(str(root_dir/'src'))
-
-# import statements start with src so that pylance / code completions will work
-from src.accounts.data.user_manager import UserManager
-from src.accounts.data.user_api import UserAPI
-from src.utils.db_manager import DBManager
-import src.config as config
+from accounts.data.user_manager import UserManager
+from accounts.data.user_api import UserAPI
+from utils.db_manager import DBManager
+import config as config
 
 ''' Now we can configure our tests'''
 

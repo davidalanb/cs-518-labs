@@ -7,7 +7,7 @@ from pydantic import ValidationError
 ''' import hack '''
 
 # get path for root_dir
-# ancestors are: data, accounts, tests, and root
+# ancestors are: data, profiles, tests, and root
 root_dir = Path(__file__).resolve().parent.parent.parent.parent
 print(root_dir)
 
