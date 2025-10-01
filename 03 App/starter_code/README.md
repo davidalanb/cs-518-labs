@@ -57,7 +57,7 @@ from accounts.data.user_models import *
 * Here are a few ways to do this.
 * The first is a hack but it will work "out of the box."
 
-### Add directories to your path (more of a hack than a real solution)
+### Solution 1: Add directories to your path in test files (hack)
 
 * You can see the hack in test_users.py
 * test_users.py is in /tests/accounts/data, so we have to traverse up the ancestor tree to get to root
@@ -73,7 +73,7 @@ sys.path.append(str(root_dir))
 sys.path.append(str(root_dir/'src'))
 ```
 
-### Install your local project in editable mode (better solution)
+### Solution 2: Install your local project in editable mode (better solution)
 
 - install your project in editable mode:  https://pip.pypa.io/en/stable/topics/local-project-installs/ 
 - run the command below from your src/ directory
