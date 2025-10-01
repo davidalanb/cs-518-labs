@@ -1,6 +1,18 @@
 # Database 2 - Profiles
 
 * Implementing DB capabilities for Profile management
+* Submission
+
+## Submission
+
+When you submit to Gradescope, it will be looking for a directory structure like this:
+
+* your_submission.zip
+    * profiles/
+        * data/
+            * db_manager.py
+            * profile_manager.py
+            * profile_models.py
 
 ## Recommended steps
 
