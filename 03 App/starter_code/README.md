@@ -68,6 +68,18 @@ python -m pip install -e path/to/SomeProject
 ### Add directories to your path (more of a hack than a real solution)
 
 * You can see the hack in test_users.py
+* test_users.py is in /tests/accounts/data, so we have to traverse up the ancestor tree to get to root
+* after we get root, we can append root (/) and /src/.
+
+```python
+# get path for root_dir
+# ancestors are: data, accounts, tests, and root
+root_dir = Path(__file__).resolve().parent.parent.parent.parent
+
+# add root and src to the path
+sys.path.append(str(root_dir))
+sys.path.append(str(root_dir/'src'))
+```
 
 ## Type hinting
 
