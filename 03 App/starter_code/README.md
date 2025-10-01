@@ -54,16 +54,8 @@ from accounts.data.user_models import *
 ## Imports in test_users
 
 * Importing in test_users is tricky, because src/ and tests/ are adjacent.
-* Here are a few ways to do this:
-
-### Install your local project in editable mode (recommended)
-
-- install your project in editable mode:  https://pip.pypa.io/en/stable/topics/local-project-installs/ 
-- run the command below from your src/ directory
-```
-python -m pip install -e path/to/SomeProject
-```
-- after this, the new imports (starting with accounts) should work anywhere
+* Here are a few ways to do this.
+* The first is a hack but it will work "out of the box."
 
 ### Add directories to your path (more of a hack than a real solution)
 
@@ -80,6 +72,15 @@ root_dir = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.append(str(root_dir))
 sys.path.append(str(root_dir/'src'))
 ```
+
+### Install your local project in editable mode (better solution)
+
+- install your project in editable mode:  https://pip.pypa.io/en/stable/topics/local-project-installs/ 
+- run the command below from your src/ directory
+```
+python -m pip install -e path/to/SomeProject
+```
+- after this, the new imports (starting with accounts) should work anywhere
 
 ## Type hinting
 
