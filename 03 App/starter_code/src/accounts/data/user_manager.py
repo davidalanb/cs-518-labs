@@ -1,5 +1,5 @@
-from db_manager import DBManager
-from user_models import *
+from utils.db_manager import DBManager
+from accounts.data.user_models import *
 
 # from pymongo.errors import DuplicateKeyError
 

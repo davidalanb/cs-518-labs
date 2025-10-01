@@ -1,15 +1,38 @@
 import unittest
+from pathlib import Path
+import sys
 
-from user_manager import UserManager
-from user_api import UserAPI
-from db_manager import DBManager
+''' This is the right way to do it, 
+but you have to install your local project in editable mode for it to work
+see README.md'''
 
-# conn_str = "<YOUR ATLAS CLUSTER URI>"
-conn_str = "mongodb://localhost:27017/"
-db = "user_db"
-col = "users"
+# # import statements start with src so that pylance / code completions will work
+# from accounts.data.user_manager import UserManager
+# from accounts.data.user_api import UserAPI
+# from utils.db_manager import DBManager
+# import config as config
 
-dbm = DBManager(conn_str, db, col)
+''' This is the hack '''
+
+# get path for root_dir
+# ancestors are: data, accounts, tests, and root
+root_dir = Path(__file__).resolve().parent.parent.parent.parent
+
+# add root and src to the path
+sys.path.append(str(root_dir))
+sys.path.append(str(root_dir/'src'))
+
+# import statements start with src so that pylance / code completions will work
+from src.accounts.data.user_manager import UserManager
+from src.accounts.data.user_api import UserAPI
+from src.utils.db_manager import DBManager
+import src.config as config
+
+''' Now we can configure our tests'''
+
+# load DB configuration
+cfg = config.USER_CONFIG
+dbm = DBManager(cfg.DB_URL_LOCL, cfg.USER_DB, cfg.USER_COL)
 umngr = UserManager(dbm)
 um = UserAPI(umngr)
 

@@ -9,9 +9,12 @@ class DBManager:
     def __init__(self, conn_str:str, db, col):
         '''connect to db server and set self.col'''
         
-        myclient = pymongo.MongoClient(conn_str)
-        mydb = myclient[db]
+        self.myclient = pymongo.MongoClient(conn_str)
+        mydb = self.myclient[db]
         self.col = mydb[col]
+
+    def close(self):
+        self.myclient.close()
 
     def create_index(self,index,unique=True):
         self.col.create_index(index, unique=unique) 

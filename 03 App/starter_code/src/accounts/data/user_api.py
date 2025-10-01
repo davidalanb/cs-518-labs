@@ -1,5 +1,5 @@
-from user_manager import UserManager
-from user_models import *
+from accounts.data.user_manager import UserManager
+from accounts.data.user_models import *
 
 class UserAPI:
     '''The UserAPI will always take plain python from the consumer (e.g. dicts, strings). 
