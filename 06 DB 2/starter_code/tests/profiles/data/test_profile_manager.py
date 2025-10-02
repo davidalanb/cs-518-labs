@@ -2,33 +2,16 @@ from pathlib import Path
 import sys
 import unittest
 
-''' import hack '''
-
-# get path for root_dir
-# ancestors are: data, accounts, tests, and root
-root_dir = Path(__file__).resolve().parent.parent.parent.parent
-print(root_dir)
-
-# add root and src to the path
-sys.path.append(str(root_dir))
-sys.path.append(str(root_dir/'src'))
-
-''' end import hack '''
-
-from src.utils.db_manager import DBManager
-from src.profiles.data.profile_manager import ProfileManager
-from src.profiles.data.profile_models import *
-from config import GUIDE_CONFIG
-
-''' gradescope hack '''
-
 try:
     from gradescope_utils.autograder_utils.decorators import weight, number
 except Exception as e:
     # print(e)
     from test_dummy import weight,number
 
-''' end gradescope hack '''
+from utils.db_manager import DBManager
+from profiles.data.profile_manager import ProfileManager
+from profiles.data.profile_models import *
+from config import GUIDE_CONFIG
 
 cs = GUIDE_CONFIG.DB_URL
 db = GUIDE_CONFIG.GUIDE_DB

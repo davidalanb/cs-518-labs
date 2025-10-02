@@ -13,7 +13,6 @@ class USER_CONFIG(DB_CONFIG):
 
     USER_DB = "user_db"
     USER_COL = "users"
-    X = "X"
 
 
      

@@ -29,44 +29,46 @@ class DBManager:
     
     #------------------ CRUD -----------------
 
-    def create(self, d: dict) -> str:
-        '''create user
-        :param d: data to insert into db
-        :returns: id
-        '''
+    ''' USE YOUR CODE FROM LAST WEEK'''
 
-    def read_by_id(self, obj_id:str) -> dict:
-        '''read user by id 
-        :param obj_id: 
-        :returns: data retrieved, or None
-        '''
+    # def create(self, d: dict) -> str:
+    #     '''create user
+    #     :param d: data to insert into db
+    #     :returns: id
+    #     '''
+
+    # def read_by_id(self, obj_id:str) -> dict:
+    #     '''read user by id 
+    #     :param obj_id: 
+    #     :returns: data retrieved, or None
+    #     '''
         
-    def read(self,query:dict) -> list:
-        '''read many by query
-        :params: query
-        :returns: data retrieved
-        '''
+    # def read(self,query:dict) -> list:
+    #     '''read many by query
+    #     :params: query
+    #     :returns: data retrieved
+    #     '''
     
-    def read_all(self) -> list:
-        '''read all
-        :returns: data
-        '''
+    # def read_all(self) -> list:
+    #     '''read all
+    #     :returns: data
+    #     '''
 
-    def update(self,obj_id: str,updates:dict) -> int:
-        ''' update by id 
-        :param obj_id: 
-        :param updates: 
-        :returns: modified_count
-        '''
+    # def update(self,obj_id: str,updates:dict) -> int:
+    #     ''' update by id 
+    #     :param obj_id: 
+    #     :param updates: 
+    #     :returns: modified_count
+    #     '''
 
-    def delete_by_id(self,obj_id: str):
-        ''' delete by id
-        :params: obj_id
-        :returns: deleted_count (int)
-        '''
+    # def delete_by_id(self,obj_id: str):
+    #     ''' delete by id
+    #     :params: obj_id
+    #     :returns: deleted_count (int)
+    #     '''
     
-    def delete(self,query:dict) -> str:
-        ''' delete many by query         
-        :params: query 
-        :returns: deleted_count 
-        '''
+    # def delete(self,query:dict) -> str:
+    #     ''' delete many by query         
+    #     :params: query 
+    #     :returns: deleted_count 
+    #     '''

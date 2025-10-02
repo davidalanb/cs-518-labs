@@ -4,31 +4,14 @@ import unittest
 from unittest.mock import Mock
 from pydantic import ValidationError
 
-''' import hack '''
-
-# get path for root_dir
-# ancestors are: data, profiles, tests, and root
-root_dir = Path(__file__).resolve().parent.parent.parent.parent
-print(root_dir)
-
-# add root and src to the path
-sys.path.append(str(root_dir))
-sys.path.append(str(root_dir/'src'))
-
-''' end import hack '''
-
-from src.profiles.data.profile_api import ProfileAPI
-from src.profiles.data.profile_models import *
-
-''' gradescope hack '''
-
 try:
     from gradescope_utils.autograder_utils.decorators import weight, number
 except Exception as e:
     # print(e)
     from test_dummy import weight,number
 
-''' end gradescope hack '''
+from profiles.data.profile_api import ProfileAPI
+from profiles.data.profile_models import *
 
 # this is a mock pm
 mock_pm = Mock()

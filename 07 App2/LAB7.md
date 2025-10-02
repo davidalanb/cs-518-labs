@@ -59,24 +59,18 @@ app.pm = ProfileAPI(pmngr)
 Required routes:
 
 ```
-My profile:
+Creating profiles:
 
-* GET /profile - view profile page.  if the user doesn't have a profile, this should automatically create one
-* POST /profile - update profile
+* GET /profiles/create          get profile create page
+* POST /profiles/create         create profile
 
 Viewing profiles:
 
-* GET /profiles/
-* GET /profile/<profile> - view another user's profile
+* GET /profiles/                 list profiles
+* GET /profiles/<profile_name>   view profile by profile name
 
-Creating adventures:
+Viewing user profiles:
 
-* GET /adventures/create - get form to create adventure
-* POST /adventures/create 
+* GET /users/<username>/profiles list profiles by username 
 
-Browsing adventures:
-
-* GET /adventures/ - get a listing for all adventures
-* GET /adventures/<profile> - see adventures by profile 
-* GET /adventures/<profile>/<adventure> - see a specific adventure
 ```

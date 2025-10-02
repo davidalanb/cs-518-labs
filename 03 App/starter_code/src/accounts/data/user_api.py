@@ -7,38 +7,40 @@ class UserAPI:
     The UserManager will return model objects.  The UserAPI dump those and return dicts.
     '''
 
-    def __init__(self, user_manager):
-        self.um = user_manager
+    '''USER YOUR CODE FROM LAST WEEK'''
 
-    def delete_all(self ) -> int:
-        return self.um.delete_all()
+    # def __init__(self, user_manager):
+    #     self.um = user_manager
 
-    #---------------- CRUD ------------------------
+    # def delete_all(self ) -> int:
+    #     return self.um.delete_all()
 
-    def create(self, user: dict ) -> str:
-        '''converts user dict to User object, 
-        passes to self.um.create and returns result'''
+    # #---------------- CRUD ------------------------
 
-        u = User(**user)
-        return self.um.create(u)
+    # def create(self, user: dict ) -> str:
+    #     '''converts user dict to User object, 
+    #     passes to self.um.create and returns result'''
 
-    def read_by_id(self, uid: str ) -> dict:
-        '''read using self.um, gets back User or None,
-        dumps to dict and returns'''
+    #     u = User(**user)
+    #     return self.um.create(u)
 
-    def read_all(self) -> list[dict]:
-        '''read all, gets back UserCollection,
-        dumps UserCollection to list of dicts'''
+    # def read_by_id(self, uid: str ) -> dict:
+    #     '''read using self.um, gets back User or None,
+    #     dumps to dict and returns'''
+
+    # def read_all(self) -> list[dict]:
+    #     '''read all, gets back UserCollection,
+    #     dumps UserCollection to list of dicts'''
     
-    def read(self, query: dict ) -> list[dict]:
-        ''' converts query to UserQuery, passes to self.um.read
-        gets back UserCollection, dumps to list of dicts
-        '''
+    # def read(self, query: dict ) -> list[dict]:
+    #     ''' converts query to UserQuery, passes to self.um.read
+    #     gets back UserCollection, dumps to list of dicts
+    #     '''
     
-    def update(self,id:str,update:dict) -> int:
-        '''converts update to UserUpdate, calls self.um.update,
-        returns result'''
+    # def update(self,id:str,update:dict) -> int:
+    #     '''converts update to UserUpdate, calls self.um.update,
+    #     returns result'''
     
-    def delete_by_id(self,id:str) -> int:
-        ''' calls self.um.delete_by_id, returns result'''
+    # def delete_by_id(self,id:str) -> int:
+    #     ''' calls self.um.delete_by_id, returns result'''
 
