@@ -3,9 +3,10 @@ import unittest
 import sys
 import os
 
-# get path for root_dir and append /src
-root_dir = Path(__file__).resolve().parent
-sys.path.append(str(root_dir/'src'))
+# # Path hack - you don't need this if you've installed your local project (see note_imports)
+# # get path for root_dir and append /src
+# root_dir = Path(__file__).resolve().parent
+# sys.path.append(str(root_dir/'src'))
 
 def discover_and_run_tests(directory):
     """
