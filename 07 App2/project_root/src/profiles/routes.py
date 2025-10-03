@@ -3,12 +3,17 @@ from functools import wraps
 from flask import Blueprint, current_app, flash, redirect, render_template, abort, request, url_for
 from flask_login import current_user, login_required
 
+from profiles.data.user_api import UserAPI
 from profiles.data.profile_api import ProfileAPI
 
 profiles = Blueprint('profiles', __name__,
                         template_folder='templates')
 
 from typing import cast
+
+def get_um() -> UserAPI:
+    """A type-hinted getter for the ProfileManager."""
+    return cast(UserAPI, current_app.um)
 
 def get_pm() -> ProfileAPI:
     """A type-hinted getter for the ProfileManager."""
@@ -35,12 +40,10 @@ def profiles():
 def create_profile():
     '''
     on GET, serve profile create form
-    on POST, get form data and create
-        get profile_name from form
-        get username from current_user
+    on POST, get username and profile_name from form
 
-    on success, redirect to profile
-    on fail, redirect back here
+    if username is not valid, flash a message and redirect here
+    else create the profile and redirect to the new profile page
     '''
 
     return "not implemented yet"
@@ -48,12 +51,25 @@ def create_profile():
 @profiles.get('/profiles/<profile_name>')
 @login_required
 def profile(profile_name):
+    '''get profile by profile name
+    render profile_view with profile data
+    profile view should:
+        give profile name and username in a table
+        show a list of skills
+        have a form that allows you to add skills
+        the form should have a hidden input with value equal to the profile id}
+    '''  
 
-    '''get profile for current user'''  
+"""
+@accounts.get('/users/{username}/profiles/)
+def get_user_profiles(username):
+   ''' get profiles by username 
+   show a listing in a table
+   THIS ENDPOINT GOES IN accounts.routes'''
+"""
 
 @profiles.post('/profiles/<profile_name>/add-skill')
 def add_skill(profile_name):
-
     ''' add skill from form
     form should have profile_id and skill
-    redirect to this profile'''
+    add skill to profile skills and redirect back to the profile'''
