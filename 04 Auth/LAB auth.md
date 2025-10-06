@@ -1,5 +1,4 @@
 <!-- https://docs.google.com/document/d/1MIbHXfZYczmQrDQaN9bNHBA94PdQBPlyv8RwPohub3k/edit?tab=t.0  -->
-
 # Implementing login in your app
 
 Submission:
@@ -11,11 +10,17 @@ Submission:
 
 ## Grading
 
-We will run your app and also look at the code:
+Autograding via Gradescope.
 
-* [8] Authentication: login / logout with message flashing
-* [8] Authorization: customized views and restricted access
-* [4] Repo and code organization and clarity
+(Alternative) Manual grading:
+* [10] Authentication: 
+    - login persists
+    - logout
+* [10] Authorization: restricted access
+    - not logged in
+    - regular user
+    - admin access
+<!-- * [4] Repo and code organization and clarity -->
 
 ## Installation
 

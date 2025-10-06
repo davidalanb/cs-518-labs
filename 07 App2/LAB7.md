@@ -1,21 +1,17 @@
 # App 2 - Profiles
 
-## Recommended steps
-
-* Setup blueprints in profiles/routes.py and app.py
-
-## Setup for app
+## Setup blueprints
 
 ### profiles/routes.py
 
-create the blueprint:
+* create the blueprint:
 
 ```python 
 profiles = Blueprint('profiles', __name__,
                         template_folder='templates')
 ```
 
-Add a method to access a typed profile API:
+* Add a method to access a typed profile API:
 
 ```python
 from typing import cast
@@ -54,23 +50,23 @@ pmngr = ProfileManager(dbm)
 app.pm = ProfileAPI(pmngr)
 ```
 
-### Implementing routes and templates
+## Implement routes and templates
 
-Required routes:
+### Profile routes
 
+* you can see the required routes in project_root/src/profiles/routes.py
+* blank template files in profiles/templates
+
+### Updates to accounts
+
+* note that there is one new endpoint to add to accounts/routes.py
+
+``` python
+@accounts.get('/users/{username}/profiles/)
+def get_user_profiles(username):
+   ''' get profiles by username 
+   show a listing in a table
+   THIS ENDPOINT GOES IN accounts.routes'''
 ```
-Creating profiles:
 
-* GET /profiles/create          get profile create page
-* POST /profiles/create         create profile
-
-Viewing profiles:
-
-* GET /profiles/                 list profiles
-* GET /profiles/<profile_name>   view profile by profile name
-
-Viewing user profiles:
-
-* GET /users/<username>/profiles list profiles by username 
-
-```
+* You will also need to implement a template in accounts/templates for listing profiles by username.

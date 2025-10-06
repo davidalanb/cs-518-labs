@@ -12,6 +12,12 @@ Gradescope
     * app.py
 * Submit to Gradescope app
 
+Rubric (for manual grading):
+* user listing          5
+* create user           5
+* view user             5
+* update / delete user  5
+
 Gitlab repo:
 
 * Add your updated code to your repo
