@@ -3,7 +3,7 @@ from functools import wraps
 from flask import Blueprint, current_app, flash, redirect, render_template, abort, request, url_for
 from flask_login import current_user, login_required
 
-from profiles.data.user_api import UserAPI
+from accounts.data.user_api import UserAPI
 from profiles.data.profile_api import ProfileAPI
 
 profiles = Blueprint('profiles', __name__,

@@ -57,6 +57,10 @@ app.pm = ProfileAPI(pmngr)
 * you can see the required routes in project_root/src/profiles/routes.py
 * blank template files in profiles/templates
 
+* create
+    - when you create a profile, you need to verify that username is valid
+    - so, you need a um getter in profile routes.
+
 ### Updates to accounts
 
 * note that there is one new endpoint to add to accounts/routes.py
