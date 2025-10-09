@@ -61,7 +61,7 @@ def profile(profile_name):
     '''  
 
 """
-@accounts.get('/users/{username}/profiles/)
+@accounts.get('/users/{username}/profiles)
 def get_user_profiles(username):
    ''' get profiles by username 
    show a listing in a table
