@@ -27,7 +27,7 @@ def delete_all():
     return f"deleted {n} profiles"
 
 @profiles.get('/profiles/')
-def profiles():
+def read_profiles():
 
     profs = get_pm().read_all() 
 

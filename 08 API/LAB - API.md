@@ -1,21 +1,5 @@
 ## Implementing an API
 
-Task:
-* Your task is to develop an API for the guide features of the app.  
-  - this includes profiles and adventures
-
-Submission:
-* Work with your individual repo
-<!-- * Add your API server (server.py) and your tests (api_tests.py) to the directory with your UserManager
-* Directory structure:
-  * user_manager/
-    * user_models.py
-    * UserManager.py
-    * unit_tests.py (i.e., user_tests.py)
-    * server.py
-    * api_tests.py
-* Push your changes to your repo when you're done -->
-
 ### Development
 
 Viewing the API specification:
