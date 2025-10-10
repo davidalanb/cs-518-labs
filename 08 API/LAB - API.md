@@ -1,5 +1,19 @@
 ## Implementing an API
 
+* CS_518/
+  - app_project/  <-- everything before this week
+    - src/
+      - accounts/
+        - data/
+      - app.py
+    - tests/
+  - api_project/  <-- new this week
+    - src/
+      - data/     <-- copy files from app/src/accounts/data
+      - main.py
+    - tests/
+      - test_api.py   <-- need to install api_project, or move this next to main.py
+
 ### Development
 
 Viewing the API specification:

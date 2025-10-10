@@ -129,19 +129,19 @@ class TestUserAPI(unittest.TestCase):
         res = self.client.put(f'/users/{un}',
                                  json={'password':"new"})
         # print(res.status_code,res.text)
-
-        # self.assertEqual(res.status_code,409)
+        # self.assertEqual(res.status_code,200)
+        
         res = self.client.get(f'/users/{un}')
         # print(res.text)
 
         u = json.loads(res.text)
         # print(u.get("password"))
 
-        # # you can just do assertEqual here
-        # self.assertEqual(u.get('password'),'new')
+        b1 = u.get('password')=='new'
+        b2 = verify_password('new',u.get('password'))
 
-        # Do this only if you're hashing your pw (bonus for auth lab)
-        self.assertTrue(verify_password('new',u.get('password')))
+        if not(b1 or b2):
+            self.fail("password doesn't match")  
 
     def test_update_by_id(self):
 
@@ -162,11 +162,11 @@ class TestUserAPI(unittest.TestCase):
         res = self.client.get(f'/users/{un}')
         u = json.loads(res.text)
 
-        # # you can just do assertEqual here
-        # self.assertEqual(u.get('password'),'new')
+        b1 = u.get('password')=='new'
+        b2 = verify_password('new',u.get('password'))
 
-        # Do this only if you're hashing your pw (bonus for auth lab)
-        self.assertTrue(verify_password('new',u.get('password')))        
+        if not(b1 or b2):
+            self.fail("password doesn't match")        
 
     #-------------------- DELETE ----------------
 
