@@ -70,7 +70,6 @@ async def delete_users(username: str) -> int:
 async def delete_users(id:str) -> int:
     '''delete users
     :param uid: delete by id
-    if no params, delete all users - use with caution!
     '''
 
 #--------------- AUTH ----------------
