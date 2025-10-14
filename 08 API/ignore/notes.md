@@ -8,7 +8,6 @@ Mapping user_api to new REST API (v1 and v2)
 
 Notes:
 
-* user_api read returns a UserCollection, but we are only using it to read by username
 * v2 is better because 
     - it is idiomatic for the path param to be an id
     - it's better if we want to allow for changing usernames

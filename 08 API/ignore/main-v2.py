@@ -77,7 +77,7 @@ async def authenticate_user(ua:UserAuth) -> User:
     '''authenticate user
     if userAuth is valid, return User
     
-    :param ui: UserAuth with credentials
+    :param ua: UserAuth with credentials
     :returns: User 
     :raises: 401 if authentication fails'''
 
