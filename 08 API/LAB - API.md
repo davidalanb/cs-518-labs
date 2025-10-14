@@ -26,7 +26,7 @@ Viewing the API specification:
 * open your browser and go to: http://127.0.0.1:8000/docs 
 
 Your job:
-* Your job is to implement the endpoints in server.py
+* Your job is to implement the endpoints in main.py
 * You also need to develop tests
 * Make sure to use unittest assertions.
 
