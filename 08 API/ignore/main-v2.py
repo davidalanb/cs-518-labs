@@ -23,7 +23,7 @@ async def get_info()->str:
 #---------------- create -------------------
 
 @app.post('/users')
-async def create_user(user: User) -> str | None:
+async def create_user(user: User) -> str:
     '''create user and return result.
 
     :param user: User to create
@@ -34,74 +34,43 @@ async def create_user(user: User) -> str | None:
 #----------------------- READ --------------------------
 
 @app.get('/users/')
-async def read_users(id:str = None) -> UserCollection | User | None:
+async def read_users(username:str = None) -> UserCollection:
     '''
-    if id is given, return user by id
+    if query param(s), return matching users
     else return all users
 
-    :param id: str id
-    :returns: 
-        User if valid id
-        UserCollection if no id
-    :raises: HTTPException 404 if user not found
+    :param usename: str
+    :returns: UserCollection
     '''
 
-@app.get("/users/{userName}")
-async def read_user(userName:str) -> User | None:
-    '''read user and return result.
+@app.get("/users/{userId}")
+async def read_user(userId:str) -> User:
+    '''read user by id
 
-    :param userName: str username
-    :returns: User if valid username
+    :param userId: str
+    :returns: User
     :raises HTTPException: 404 if user is not found'''
 
 #------------------------ update and delete ------------------
 
-@app.put('/users/{userName}')
-async def update_user(userName:str,user:UserUpdate) -> int:
-    ''' update user by username and return result
-    
-    :param userName: str username
-    :param user: UserUpdate fields to update
-    :returns int modified_count
+@app.put('/users/{userId}')
+async def update_user(userId:str,user:UserUpdate) -> int:
+    ''' update user by id and return result
+
+    :returns: int modified_count
     :raises HTTPException: 404 user not found'''
-
-# # NOT USED
-# @app.put('/users/')
-# async def update_user(id:str,user:UserUpdate) -> int:
-#     ''' update user by id and return result'''
-
-#     return user_manager.update(id,user)
 
 #---------------- DELETE ----------------
 
-@app.delete('/users/{username}')
-async def delete_user(username: str) -> int:
-    '''delete user by username
+@app.delete('/users/{userId}')
+async def delete_user(userId: str) -> int:
+    '''delete user by id
+    if no id is provided, delete all users
 
-    :param username: delete by username
-        if username == "all" delete all
     :raises HTTPException: 404 user not found
     '''
 
-
-@app.delete('/users/')
-async def delete_users(id:str) -> int:
-    '''delete user by id
-
-    :param uid: str id
-    :returns: int deleted_count
-    :raises HTTPException: 404 if user not found
-    '''
-
 #--------------- AUTH ----------------
-
-'''
-# TODO: Add UserAuth model to user_models.py
-
-class UserAuth(BaseModel):
-    username: str
-    password: str
-'''
 
 @app.post('/users/authenticate')
 async def authenticate_user(ua:UserAuth) -> User:
