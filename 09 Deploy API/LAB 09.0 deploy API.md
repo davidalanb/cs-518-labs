@@ -1,48 +1,41 @@
-## Deploy Guide Service
-
-Task - deploy your Guide Service to Azure functions
-
-<!-- Directory structure (something like this, names may vary):
-* user_service/
-  * user_models.py
-  * UserManager.py
-  * user_tests.py
-  * server.py
-  * api_tests.py
-  * [azure functions files] (function_app.py, etc.)
-  * README.md -->
-
-<!-- 
-### Test with deployed DB
-
-Test with unit tests:
-- Set the conn_str in your unit tests (user_tests.py) to the deployed cluster.
-- rerun and verify.
-
-Update your server.py
-- Set conn_str in server.py to URI with username / password
-- Rerun API tests and verify. -->
-
-<!-- ### Configure Atlas for access from Functions App
-
-* Sign into MongoDB Atlas
-* Security > Network Access > Add IP Address
-* Add this Entry: 0.0.0.0/0 -->
-
-### Connect fastAPI app to Azure Functions app
+# Deploy User API
 
 references:
+
 * https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-python 
 * https://learn.microsoft.com/en-us/samples/azure-samples/fastapi-on-azure-functions/fastapi-on-azure-functions/
 
+We will connect our FastAPI app to an Azure function app
+
+## Initialize azure functions app
+
 steps:
-* open a terminal in the root directory of your service (i.e., where server.py and UserManager.py are located)
+
+* open a terminal in the src directory of your service (i.e., where main.py is located)
 * run this command:
-```func init --python```
-* add to requirements.txt
-    - fastapi
-    - pymongo
-* add to host.json:
+  * ```func init --python```
+
+### Setup requirements
+
+generate requirements.txt
+
+* install pipreqs
+  * ```pip install pipreqs```
+* navigate in terminal to api src directory
+* (optional) backup your requirements.txt
+  * the command below will overwrite requirements.txt
+* run pipreqs
+  * ```pipreqs . --force```
+
+add azure-functions
+
+* **make sure to add azure-functions to requirements.txt**
+
+### Setup host.json and function_app.py
+
+host.json:
+
+* add to host.json, inside of the top-level dict:
 ```
   "extensions": {
     "http": {
@@ -50,18 +43,22 @@ steps:
     }
   }
 ```
+
+function_app.py:
+
 * REPLACE the contents of function_app.py with the code below.
-  * (assumes that your fastapi app is defined in server.py)
-```
+  * (assumes that your fastapi app is defined in main.py)
+```python
 import azure.functions as func
 
-from server import app as fastapi_app
+from main import app as fastapi_app
 
 app = func.AsgiFunctionApp(app=fastapi_app, http_auth_level=func.AuthLevel.ANONYMOUS)
 ```
 
 try it out:
-* in your API project root, run "func start"
+* in your API project root, run ```func start```
+* go to localhost:7071/docs
 
 ### Test with Azure Functions running locally
 
@@ -80,23 +77,43 @@ Steps:
   * For REGION you can use "EAST US"
   * For GROUP_NAME, STORAGE_NAME, and APP_NAME, you will come up with values.
 
+Notes fa25:
+* You should aleady have a resource group (GROUP_NAME) from deploying your app.
+* You can go to portal.azure.com
+  - app services OR
+  - storage groups  
+
+
 ### Command quick-ref:
+
+Commands:
 
 ```
 az login
 
-az group create --name <GROUP_NAME> --location <REGION>
+<!-- Not necessary: you can use the group created when deploying the app -->
+<!-- az group create --name <GROUP_NAME> --location <REGION> -->
 
-az storage account create --name <STORAGE_NAME> --location <REGION> --resource-group <GROUP_NAME> --sku Standard_LRS
+az storage account create --name <STORAGE_NAME> --resource-group <GROUP_NAME> --sku Standard_LRS
 
 az functionapp create --resource-group <GROUP_NAME> --consumption-plan-location westeurope --runtime python --runtime-version <PYTHON_VERSION> --functions-version 4 --name <APP_NAME> --os-type linux --storage-account <STORAGE_NAME>
 
 func azure functionapp publish <APP_NAME>
 ```
 
+Example:
+
+```
+az storage account create --name CS518-RG --resource-group cs518fa25storage --sku Standard_LRS
+
+az functionapp create --resource-group CS518-RG --consumption-plan-location eastus --runtime python --runtime-version 3.11 --functions-version 4 --name userAPIfa25 --os-type linux --storage-account cs518fa25storage
+
+func azure functionapp publish userAPIfa25
+```
+
 ### Testing with deployed API
 
-* Successfull deployment should give you a URL, like: <service-name>.azurewebsites.net
+* Successfull deployment should give you a URL, like: myservice.azurewebsites.net
 * Update your API tests to use this URL.
 
 ### Deployment tips and gotchas
@@ -110,7 +127,7 @@ Gotchas:
 
 * "Remote build succeeded!" But no functions shown
   * make sure that you are connecting to your Atlas cloud DB, not your local
-  * make sure that you do not have any extra imports that are not included in requirements.txt
+  * make sure that all of your imports are included in requirements.txt
 
 * Can't create Azure Storage Account: SubscriptionNotFound
   * https://stackoverflow.com/questions/78912586/cant-create-azure-storage-account-subscriptionnotfound 

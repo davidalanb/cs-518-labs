@@ -15,5 +15,9 @@ class UserCollection(BaseModel):
 class UserQuery(BaseModel):
     username: str#Optional[str] = None
 
+class UserAuth(BaseModel):
+    username: str
+    password: str
+
 class UserUpdate(BaseModel):
     password:str#Optional[str]=None

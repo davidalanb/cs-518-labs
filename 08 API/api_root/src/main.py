@@ -74,6 +74,14 @@ async def delete_users(id:str) -> int:
 
 #--------------- AUTH ----------------
 
+'''
+# Add UserAuth model to user_models.py
+
+class UserAuth(BaseModel):
+    username: str
+    password: str
+'''
+
 @app.post('/users/authenticate')
 async def authenticate_user(ua:UserAuth) -> User:
     '''authenticate user
