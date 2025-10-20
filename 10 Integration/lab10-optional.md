@@ -10,3 +10,5 @@ Checklist:
 * make sure that all of your requirements are on requirements.txt
 
 Finally, redeploy your app.
+
+PS: make sure that you're keeping your Gitlab repo updated!
