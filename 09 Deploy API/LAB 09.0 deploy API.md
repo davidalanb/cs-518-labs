@@ -11,6 +11,8 @@ We will connect our FastAPI app to an Azure function app
 
 steps:
 
+Install the azure-functions package for Python
+
 * open a terminal in the src directory of your service (i.e., where main.py is located)
 * run this command:
   * ```func init --python```
