@@ -131,7 +131,7 @@ Gotchas:
 
 * Can't create Azure Storage Account: SubscriptionNotFound
   * https://stackoverflow.com/questions/78912586/cant-create-azure-storage-account-subscriptionnotfound 
-  * Azure portal > Subscriptions > Settings > Resource Providers
+  * Azure portal > Subscriptions > (Choose your subscription) > Settings > Resource Providers
   * search "Microsoft.Storage" and change status to Registered
 * Azure functions referenced bundle microsoft.azure.functions.extensionbundle [..] doe snot meet required minimum version
   * https://learn.microsoft.com/en-us/answers/questions/1109340/1-8-1-does-not-meet-required-minimum-version-where 

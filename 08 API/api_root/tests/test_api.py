@@ -163,8 +163,12 @@ class TestUserAPI(unittest.TestCase):
         u = json.loads(res.text)
 
         b1 = u.get('password')=='new'
-        b2 = verify_password('new',u.get('password'))
-
+        
+        try:
+            b2 = verify_password('new',u.get('password'))
+        except ValueError:
+            b2 = None
+            
         if not(b1 or b2):
             self.fail("password doesn't match")        
 
