@@ -13,11 +13,14 @@
         - clients/
             - exceptions.py
             - user_client.py
+    - app.py                <-- your flask app
+    - (etc...)              <-- other files and folders
 
     - tests/
         - test_clients/
             - test_user_client.py - your API needs to be running 
             - test_user_client_mock.py - this is the test that GS will use
+        - (etc...)
             
 ## Interface / integration
 
