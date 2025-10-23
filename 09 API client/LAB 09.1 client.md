@@ -13,8 +13,8 @@
         - clients/
             - exceptions.py
             - user_client.py
-    - app.py                <-- your flask app
-    - (etc...)              <-- other files and folders
+        - app.py                <-- your flask app
+        - (etc...)              <-- other files and folders
 
     - tests/
         - test_clients/
