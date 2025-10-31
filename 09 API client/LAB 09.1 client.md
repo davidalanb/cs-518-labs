@@ -13,6 +13,7 @@
         - clients/
             - exceptions.py
             - user_client.py
+            - \_\_init\_\_.py       <-- add this for module recognition
         - app.py                <-- your flask app
         - (etc...)              <-- other files and folders
 
