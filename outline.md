@@ -10,10 +10,10 @@
 ## Epic: User management
 
 2. User data
-    2. Data model and API 
+    2.1 Data model and API 
         * data model / pydantic
         * user adapter
-    3. DB management
+    2.2 DB management
         * DB operations / pymongo
         * generic DB manager
         * connect to user adapter
