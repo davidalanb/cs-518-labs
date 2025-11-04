@@ -1,14 +1,20 @@
 # Sprint planning
 
-### Outline:
+## Outline & submission:
 
-* Sprint goal (work on two features)
-* Stories (prioritize and select previously defined stories)
-* Design: Design data model and API for each of the two features
-* Work: determine responsibilities for team members
+Sprint planning document:
+
+* sprint planning
+    * Sprint goals / features
+    * Stories grouped by feature
+* story decomposition
+    * stories are decomposed into work items
+    * contract / designs:
+        - data model and API / adapter template
+* Responsibilities for team members
     - 4 team members for feature1 / feature2, frontend / backend
 
-### Submission
+Submission:
 
 * Submit document that summarizes the items below.
 * Add your data model and API files to your group repository and provide a link to those files in your submitted document.
@@ -17,13 +23,41 @@
 
 * Create iteration (done for you) 
 * Setup issue board
+    - plan > issue boards
+    - [create list]
+    - iteration > select iteration
+    - move iteration in between "Open" and "Closed"
 
-# Sprint planning
+## Sprint planning
 
-* Identify sprint goal.
+* Identify sprint goal(s).
+    - feature 1:
+    - feature 2:
 * Select stories that contribute to that goal.
+    - group stories by feature
 
 * **GITLAB**: Move selected stories into current iteration.
+
+## Story decomposition
+
+* For the selected issues, identify the "definition of done"
+* Identify the work required to complete the story.
+
+Examples of tasks:
+
+* Frontend:
+    * UI
+    * routing
+    * API access
+* Backend: 
+    * API (internal or external)
+    * Business logic
+    * Database operations
+
+- you don't need to add "testing" as an issue - it is an inherent part of development.
+
+* **GITLAB** create new issues for the work tasks you've identified.
+    - you can use labels for related tasks
 
 ## Designs
 
@@ -39,22 +73,13 @@
 
 ## Responsibilities
 
+* Identify team member responsibilities using the matrix below.
+
 |               | Feature 1 | Feature 2 |
 |---            |-----------|-----------|
 |**Frontend**   | Person A  | Person B  |
 |**Backend**    | Person C  | Person D  |
 
-* Frontend:
-    * UI
-    * routing
-    * API access
-* Backend: 
-    * API (internal or external)
-    * Business logic
-    * Database operations
-
 * **GITLAB**: 
-    - create new issues for the work required to develop the stories.
-    - each story should have multiple associated issues.
-    - you don't need to add "testing" as an issue - it is an inherent part of development.
-    - assign issues to team members.
+    - team members should self-assign issues appropriate to them.
+    - you may add issues as needed.
