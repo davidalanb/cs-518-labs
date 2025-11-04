@@ -2,18 +2,20 @@
 
 ## Submission
 
-Add your charter to "design" directory in your group project repo.
-* Your charter should be in markdown (md) or pdf format.
+* Your charter and stories should be in markdown (md) or pdf format.
+* Submit to Canvas
+* Add your charter to "docs" directory in your group project repo.
 
 ## Outline
 
 * Essentials
     * Project name
     * Team members
+    * Target audience
 * Long term
     * Vision
-    * Target audience / personas
     * Value
+    * personas
 * Scope / medium and short term
     * Epics 
     * features
@@ -26,16 +28,16 @@ Add your charter to "design" directory in your group project repo.
     * Team members (include major)
     * Target audience (be concise here, more details later)
 
+* Long-term (product lifetime):
+    - Vision: The long-term, aspirational purpose.
+    - Value: what value does this product provide to the target audience?
+
 - Personas:
     - a Persona is a semi-fictional representation of an ideal or target user, created to help the development team understand and empathize with their audience   
     * TODO:
         - You should develop one persona per team member.
         - personas include: name, bio, motivation, goals. 
         - each persona should be 1-2 paragraphs.
-
-* Long-term (product lifetime):
-    - Vision: The long-term, aspirational purpose.
-    - Value: what value does this product provide to the target audience?
 
 ## Epics and features
 
