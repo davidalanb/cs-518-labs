@@ -1,14 +1,6 @@
-## Responsibilities
+# Sprint goal
 
-* Feature 1: Guide adventure creation
-    - John (frontend)
-    - Jane (backend)
-* Feature 2: Adventure discovery & search
-    - Kate (frontend)
-    - Kirby (backend)
-
-All of the team members need to agree on the shared data model and API.
-After that, each feature team can plan out their own work.
+Goal: "Enable guides and clients to create and discover adventures, respectively."
 
 ## Selected stories
 
@@ -17,11 +9,11 @@ Each feature team (pair) should select 2-4 stories.
 
 * Feature 1 selected stories
 
-    * As a guide, I want to specify a list of required gear for my adventure, so that adventurers know what they must bring to participate.
+    * As a guide, I want to specify a title and description for my adventure, so that..
     * As a guide, I want to set a maximum group size and a deadline to join for my adventure, so that I can manage logistics and capacity effectively.
     * As a guide, I want to designate the adventure's difficulty level (e.g., Easy, Moderate, Strenuous), so that adventurers can accurately assess if it matches their skills.
     * As a guide, I want to mark my adventure as a "Multi-day Trip" and input start/end dates, so that users have full clarity on the commitment required.
-    * specify location
+    * As a guide, I want to specify location, so that..
 
 * Feature 2 selected stories
 
@@ -30,35 +22,47 @@ Each feature team (pair) should select 2-4 stories.
     * As an aspiring adventurer, I want to save an adventure to a "Wishlist" without joining, so that I can easily reference it later when I am ready to book.
     * As an aspiring adventurer, I want to see how many spots are left on an adventure listing, so that I know the urgency of booking before the group fills up. 
 
-## Decompose stories into work
+## Story decomposition 
 
-Work items / Gitlab issues: 
+(do this for as many of the stories as you think will fit into your sprint)
+(recommend to do RCUD order)
 
-* Contract (Both):
-    * Data models
-    * API specification
-* Frontend (John):
-    * UI
-    * routing
-    * API access
-* Backend (Jane): 
-    * API (internal or external)
-    * Business logic
-    * Database operations
-* Integration testing and deployment
-    * Testing
-    * Deployment
+**Example story: Read operation**
 
-Notes:
+* As a client, I want to see a list of adventures with title and description, so that..
 
-* Unit testing is expected for all stories, so it doesn't need to be a separate issue.
-* Backend can test independently
-* Frontend can test independently of backend by using mocking 
-    - For example, you can create a mock API client that will allow you to build UI elements without relying on a real API.
+Tasks:
 
-## Specify contract(s) as needed
+* contract (see api-sketch_minimal.md):
+    * minimal data model (title and description)
+    * minimal API (only for this story)
+* frontend: 
+    * mock api_client: (read dummy data)
+    * app routes: 
+        - (GET /adventures/)
+    * UI: adventure listing
+* backend:
+    * api: (read, can use dummy data for unit testing)
+        - GET /adventures/
+    * business logic
+    * DB manager (probably already done)
+* integration and deployment
+    * merge frontend and backend code into main
+    * integration testing
+    * deployment
 
-* See api-sketch.md
+Example story: Create
+
+* As a guide, I want to create an adventure with title and description, so that..
+
+## Responsibilities
+
+* Feature 1: Guide adventure creation
+    - John (frontend)
+    - Jane (backend)
+* Feature 2: Adventure discovery
+    - Kate (frontend)
+    - Kirby (backend)
 
 <!-- 
 ## Full stories

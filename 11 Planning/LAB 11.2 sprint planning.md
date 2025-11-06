@@ -45,6 +45,11 @@ Submission:
 
 Examples of tasks:
 
+Work items / Gitlab issues: 
+
+* Contract:
+    * Data models
+    * API specification
 * Frontend:
     * UI
     * routing
@@ -53,8 +58,16 @@ Examples of tasks:
     * API (internal or external)
     * Business logic
     * Database operations
+* Integration testing and deployment
+    * Testing
+    * Deployment
 
-- you don't need to add "testing" as an issue - it is an inherent part of development.
+Notes:
+
+* Unit testing is expected for all stories, so it doesn't need to be a separate issue.
+* Backend can test independently
+* Frontend can test independently of backend by using mocking 
+    - For example, you can create a mock API client that will allow you to build UI elements without relying on a real API.
 
 * **GITLAB** create new issues for the work tasks you've identified.
     - you can use labels for related tasks
