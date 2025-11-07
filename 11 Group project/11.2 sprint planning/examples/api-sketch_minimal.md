@@ -15,6 +15,9 @@ class Adventure:
     adv_name: str
     adv_desc: str
 
+    # TODO: location
+    # TODO: datetime
+
 class AdventureUpdate:
 
     id: str
@@ -27,9 +30,16 @@ class AdventureUpdate:
 
 ### client function signatures:
 
+higher priority: RC
+
 ```python
 create_adventure(adv: dict) -> str
 read_adventure(id: str) -> dict
+```
+
+lower priority: UD
+
+```
 update_adventure(id: str, update: dict) -> int
 delete_adventure(id) -> int
 ```

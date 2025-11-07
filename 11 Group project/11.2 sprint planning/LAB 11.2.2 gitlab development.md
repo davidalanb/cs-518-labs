@@ -54,3 +54,47 @@ git merge main
     - Or, you can do the same thing yourself with two branches.
 
 * TODO: team members should work together to create and resolve merge conflicts.
+
+## Reverting changes
+
+Scenario:
+
+* You've accidentally committed some changes on your local main.
+* But you can't push those to the remote because it's protected.
+* So you need to save those changes to your dev branch
+* And then, revert those changes (or reset if needed)
+
+## Saving your changes
+
+* If you want to keep the changes that you made to main, you will need to merge them into your dev branch.
+
+```
+git checkout david-dev
+git merge main
+```
+
+### Reverting a commit
+
+Reverting:
+
+* view the commit history
+    - the most recent commit will be on top
+```
+git log
+```
+* revert (undo a commit)
+    - the hash is the long sequence of letters and numbers
+    - e.g.: d849595cbd528f5d1451b5ca5b81946889f54ed5
+```
+git revert <HASH>
+```
+
+## Reset local main 
+
+* ...back to the last commit it had in common with the remote
+
+```
+git checkout main
+git reset --hard origin/main
+```
+

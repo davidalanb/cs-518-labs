@@ -4,9 +4,6 @@ Contents:
 * collaborating
 * commiting code
 * standup meetings
-* advisor meetings
-
-See: [Schedule for advisor meetings](https://docs.google.com/spreadsheets/d/1m9OdGTEYBHudAmjP6OkwUhos3_XzWTMpAOAQaszj1GQ/edit?usp=sharing)
 
 ### Collaborating
 
@@ -29,10 +26,4 @@ Typical discussion topics include:
 * Are there any impediments blocking my progress?
 
 Each team should have at least **two standup meetings per week.** 
-
-### Checkin with advisor
-
-For this course, your "advisor" is your TA.
-
-You should have **one standup meeting per week with your advisor.**
 

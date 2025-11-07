@@ -7,15 +7,17 @@ Goal: "Enable guides and clients to create and discover adventures, respectively
 Prioritize stories.  Come up with more if you need to.  Or decompose large stories as needed.
 Each feature team (pair) should select 2-4 stories.
 
-* Feature 1 selected stories
+* Feature 1: adventure creation
 
-    * As a guide, I want to specify a title and description for my adventure, so that..
+    * p:1.  As a guide, I want to specify a title and description for my adventure, so that..
+    * p:2.  As a guide, I want to mark my adventure as a "Multi-day Trip" and input start/end dates, so that users have full clarity on the commitment required.
+    * p:3.  As a guide, I want to specify location, so that..
+    --
     * As a guide, I want to set a maximum group size and a deadline to join for my adventure, so that I can manage logistics and capacity effectively.
     * As a guide, I want to designate the adventure's difficulty level (e.g., Easy, Moderate, Strenuous), so that adventurers can accurately assess if it matches their skills.
-    * As a guide, I want to mark my adventure as a "Multi-day Trip" and input start/end dates, so that users have full clarity on the commitment required.
-    * As a guide, I want to specify location, so that..
 
-* Feature 2 selected stories
+
+* Feature 2: adventure discovery
 
     * As an aspiring adventurer, I want to search for adventures occurring within a specific date range (e.g., next weekend, next month), so that I can quickly find relevant options for my schedule.
     * As an aspiring adventurer, I want to sort search results by "Nearest," "Date," and "Difficulty," so that I can prioritize the most relevant trips based on my immediate needs.
