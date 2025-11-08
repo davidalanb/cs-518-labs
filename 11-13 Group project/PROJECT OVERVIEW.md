@@ -12,14 +12,17 @@ These assignments are group grades.  However, adjustments can be made based on i
 
 * Two features, \~3-4 stories per feature
 
-Example
+Example:
 
 * feature 1: adventure discovery  
-  * "As a client, I want to view a list of adventures with name and description..."  
-  * "...I want to filter by start and end datetime"  
+  * "As a client, I want to view a list of adventures with name and description..." 
+  * "...I want to view adventures being offered by a specific guide..." 
+  * "...I want to filter by start and end datetime..."  
   * "...I want to browse by location..."  
 * feature 2: adventure creation  
   * "As a guide, I want to create an adventure with name and description, so that..."
+  * "...I want to specify start and end datetime..."
+  * "...I want to specify location..."
 
 ### Implementation:
 
