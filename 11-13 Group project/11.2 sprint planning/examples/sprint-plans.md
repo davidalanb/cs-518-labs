@@ -1,6 +1,8 @@
 # Sprint goal
 
 Goal: "Enable guides and clients to create and discover adventures, respectively."
+More specific goal: "Enable basic adventure creation and listing."
+Stretch goal: "Enable adventure specification and discovery by datetime and/or location."
 
 ## Selected stories
 
