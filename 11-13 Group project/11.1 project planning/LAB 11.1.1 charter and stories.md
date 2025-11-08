@@ -1,27 +1,27 @@
 # Project planning - charter
 
-## Submission
+## Rubric and submission
+
+### Rubric
+
+## **\[20\] Charter and stories:**
+
+* document contents:  
+  * \[4\] essentials  
+  * \[4\] vision, value, and personas  
+  * \[4\] epics and features  
+  * \[4\] stories  
+* **\[4\] Gitlab: issues / product backlog**
+
+### Submission
 
 * Your charter and stories should be in markdown (md) or pdf format.
 * Submit to Canvas
 * Add your charter to "docs" directory in your group project repo.
 
-## Outline
+## Contents
 
-* Essentials
-    * Project name
-    * Team members
-    * Target audience
-* Long term
-    * Vision
-    * Value
-    * personas
-* Scope / medium and short term
-    * Epics 
-    * features
-    * Stories
-
-## Essentials
+### Essentials
 
 * Essentials:
     * Project name   
@@ -39,7 +39,7 @@
         - personas include: name, bio, motivation, goals. 
         - each persona should be 1-2 paragraphs.
 
-## Epics and features
+### Epics and features
 
 * Short to mid-term (a month to a quarter):
     - Epics: An initiative is composed of Epics.  An Epic can also be thought of as a "feature set."
@@ -47,7 +47,7 @@
 
 <!-- ## Services -->
 
-## Stories
+### Stories
 
 * Short term (within a sprint):
     - Stories: short requirements or requests written from the perspective of an end user.
