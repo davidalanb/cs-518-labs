@@ -27,15 +27,6 @@ Our vision is to create a vibrant and inclusive platform that connects outdoor a
 * 4.1 Real-time Notifications: Ability for users to receive alerts about updates and new opportunities.
 * 4.2 Guide Review Submission: Ability for Adventurers to leave reviews and ratings for a Guide after a trip.
 * 4.3 Media Sharing & Story Feed: Ability for users to share photos/stories and view a content feed.
-<!--  
-## Services
-
-* **1. Identity & Profiles Service:** Manages user authentication, accounts, and all profile data (both Adventurers and Guides).
-* **2. Adventure Management Service:** Manages the creation, listing, searching, and itinerary details of all trips/adventures.
-* **3. Bookings & Payments Service:** Manages all transaction-related logic, including joining/confirming a trip and payment processing (if applicable).
-* **4. Communication & Notification Service:** Manages direct messages, in-app communications, and push/email notifications.
-* **5. Content & Media Service:** Manages all user-generated content like photos, stories, and media uploads.
-* **6. Reviews & Ratings Service:** Manages the submission, storage, and display of post-adventure feedback. -->
 
 ## Stories (2 new features)
 

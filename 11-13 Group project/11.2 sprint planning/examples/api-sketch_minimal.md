@@ -30,14 +30,14 @@ class AdventureUpdate:
 
 ### client function signatures:
 
-higher priority: RC
+higher priority: read and create
 
 ```python
 create_adventure(adv: dict) -> str
 read_adventure(id: str) -> dict
 ```
 
-lower priority: UD
+lower priority: update and delete
 
 ```
 update_adventure(id: str, update: dict) -> int
