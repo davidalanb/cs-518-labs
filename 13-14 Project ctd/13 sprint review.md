@@ -31,7 +31,9 @@ As a guide, I want to specify location, so that..|NOT DONE|API route is done; fr
 
 ## Demo
 
-Demo by feature, then by developer (backend/frontend).  The demo should be very concise (~5-10 min).  Each individual should present their own work.
+Demo by feature, then by developer (backend/frontend).    Each individual should present their own work.
+The demo should be very concise (~5-10 min).  Create a Teams meeting, record, share your screen.  
+Make sure that you plan before you record.  
 
 ### feature X
 
