@@ -1,15 +1,19 @@
 ## **\[20\] Sprint review**
 
-Participants: team members
+### Project and sprint requirements
 
-Overall scope guidelines:
+Implemented and deployed by end of project:
 
 * Two features, ~3-4 stories per feature
 
-Progress requirements for this sprint:
+Implemented by end of this sprint:
 
 * at least 2 completed stories per group
 * at least one completed task/issue per team member
+
+### Sprint review
+
+Each team will conduct a sprint review in class.  They will document their meeting.  After class, they will create demo videos.
 
 Rubric:
 
