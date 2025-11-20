@@ -78,7 +78,7 @@ Key points:
 
 Mechanics:
 
-* The demo should be very concise (~5 min).  
+* The demo should be concise (5-10 min).  
 * Create a Teams meeting, record, share your screen.  Make sure that you plan before you record.  
 
 ### Story X
